@@ -20,15 +20,15 @@ class _ZikirPageState extends State<ZikirPage> {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SvgPicture.asset(
-                "assets/svg/zikir/burger_slider.svg",
-              ),
-              //SvgPicture.asset("asstes/svg/main/book.svg"),
-              // InkWell(
-              //   onTap: () {},
-              //   child: SvgPicture.asset("asstes/svg/zikir/burger_slider.svg"),
+              // SvgPicture.asset(
+              //   "assets/svg/zikir/burger_slider.svg",
               // ),
+              InkWell(
+                onTap: () {},
+                child: SvgPicture.asset("asstes/svg/zikir/burger_slider.svg"),
+              ),
               Container(
                 width: 200,
                 height: 200,
@@ -39,12 +39,12 @@ class _ZikirPageState extends State<ZikirPage> {
                         "Ля иляха илля Анта! Субханака, инни кунту мина-з-залимин!"),
                     Text(
                         "Нет Бога достойного поклонения, кроме Тебя, Пречист Ты, поистине, я был одним из несправедливых"),
-                    SvgPicture.asset("asstes/svg/zikir/color.svg"),
                   ],
                 ),
               ),
             ],
-          )
+          ),
+          SvgPicture.asset("assets/svg/zikir/counter.svg")
         ],
       ),
     );
