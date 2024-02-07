@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/theme/app_colors.dart';
+import 'package:bir_umma/features/quran/presentation/pages/quran/learn_the_quran_page.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -19,7 +20,13 @@ class _QuranPageState extends State<QuranPage> {
         itemCount: 3,
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const LearnTheQuranPage()),
+              );
+            },
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
