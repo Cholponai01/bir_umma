@@ -17,7 +17,6 @@ class LearnTheQuranPage extends StatelessWidget {
           body: CustomScrollView(slivers: [
             SliverAppBar(
                 backgroundColor: AppColors.white,
-                pinned: true,
                 floating: true,
                 elevation: 0,
                 leading: Row(
@@ -34,7 +33,7 @@ class LearnTheQuranPage extends StatelessWidget {
                         );
                       },
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 3),
                     const Text(
                       'Куран 0дон',
                       style: TextStyle(color: AppColors.black, fontSize: 18),
