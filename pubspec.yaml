@@ -17,8 +17,6 @@ dependencies:
   flutter_svg: ^2.0.9
   firebase_core: ^2.25.3
   firebase_auth: ^4.17.3
-  cloud_firestore: ^4.15.3
-  firebase_storage: ^11.6.4
   auto_route: ^7.8.4
 
 dev_dependencies:
@@ -33,9 +31,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/svg/main/
-    - assets/svg/question_answer/
-  #   - images/a_dot_ham.jpeg
+    - assets/svg/main/.
+    - assets/images/quran/.
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
