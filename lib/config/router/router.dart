@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/home_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/main/main_page.dart';
 import 'package:bir_umma/features/profile/presentation/pages/profile/profile_page.dart';
-import 'package:bir_umma/features/question_answer/presentation/pages/question_answer/question_answer_page.dart';
+import 'package:bir_umma/features/question_answer/presentation/pages/premium/premium_page.dart';
 import 'package:bir_umma/features/quran/presentation/pages/quran/quran_page.dart';
 import 'package:bir_umma/features/zikir/presentation/pages/zikir/zikir_page.dart';
 
@@ -18,5 +18,6 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: QuranRoute.page),
         AutoRoute(page: ZikirRoute.page),
         AutoRoute(page: ProfileRoute.page),
+        AutoRoute(page: PremiumRoute.page)
       ];
 }

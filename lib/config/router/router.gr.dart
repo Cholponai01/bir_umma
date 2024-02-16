@@ -27,16 +27,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MainPage(),
       );
     },
+    PremiumRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PremiumPage(),
+      );
+    },
     ProfileRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const ProfilePage(),
-      );
-    },
-    QuestionAnswerRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const QuestionAnswerPage(),
       );
     },
     QuranRoute.name: (routeData) {
@@ -78,6 +78,20 @@ class MainRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PremiumPage]
+class PremiumRoute extends PageRouteInfo<void> {
+  const PremiumRoute({List<PageRouteInfo>? children})
+      : super(
+          PremiumRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PremiumRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
