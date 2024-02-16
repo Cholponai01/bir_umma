@@ -74,7 +74,7 @@ class _MainPageState extends State<MainPage> {
             BottomNavigationBarItem(
               label: "Башкы бет",
               icon: SvgPicture.asset(
-                "assets/svg/main/home.svg",
+                "assets/quran/svg/main/home.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 0 ? AppColors.blue : AppColors.black,
@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                "assets/svg/main/sms.svg",
+                "assets/guran/svg/main/sms.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 1 ? AppColors.blue : AppColors.black,
@@ -91,7 +91,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                "assets/svg/main/book.svg",
+                "assets/quran/svg/main/book.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 2 ? AppColors.blue : AppColors.black,
@@ -100,7 +100,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                "assets/svg/main/zikir.svg",
+                "assets/quran/svg/main/zikir.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 3 ? AppColors.blue : AppColors.black,
@@ -109,7 +109,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                "assets/svg/main/user.svg",
+                "assets/quran/svg/main/user.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 4 ? AppColors.blue : AppColors.black,

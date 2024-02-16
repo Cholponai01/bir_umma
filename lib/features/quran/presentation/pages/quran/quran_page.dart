@@ -40,8 +40,8 @@ class _QuranPageState extends State<QuranPage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         image: const DecorationImage(
-                            image:
-                                AssetImage("assets/images/quran/fon_quran.png"),
+                            image: AssetImage(
+                                "assets/quran/images/quran/fon_quran.png"),
                             fit: BoxFit.fill),
                       ),
                       child: Stack(
