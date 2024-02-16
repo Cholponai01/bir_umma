@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/home_page.dart';

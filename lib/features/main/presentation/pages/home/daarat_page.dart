@@ -1,18 +1,15 @@
-import 'package:bir_umma/features/main/presentation/pages/home/daarat_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class DaaratPage extends StatefulWidget {
+  const DaaratPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<DaaratPage> createState() => _DaaratPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  List<String> fruits = [];
-
+class _DaaratPageState extends State<DaaratPage> {
   List<GridMenuItem> gridMenu = [];
 
   @override
@@ -20,47 +17,13 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     gridMenu = [
       GridMenuItem(
-        img: "assets/home/1.png",
-        title: "Даарат",
-        onTap: () {},
-      ),
-      GridMenuItem(img: "assets/home/2.png", title: "Намаз", onTap: () {}),
-      GridMenuItem(img: "assets/home/3.png", title: "Орозо", onTap: () {}),
+          img: "assets/home/daarat/gusul.png", title: "Гусул", onTap: () {}),
       GridMenuItem(
-          img: "assets/home/4.png", title: "Ажылык Умра", onTap: () {}),
+          img: "assets/home/daarat/daarat.png", title: "Даарат", onTap: () {}),
       GridMenuItem(
-          img: "assets/home/5.png", title: "Зекет Садака", onTap: () {}),
-      GridMenuItem(img: "assets/home/6.png", title: "Дем салуу", onTap: () {}),
-      GridMenuItem(
-        img: "assets/home/7.png",
-        title: "Кабыр казуу",
-        onTap: () {},
-      ),
-      GridMenuItem(
-        img: "assets/home/8.png",
-        title: "Талак",
-        onTap: () {},
-      ),
-      GridMenuItem(
-        img: "assets/home/9.png",
-        title: "Төрт мазгаб",
-        onTap: () {},
-      ),
-      GridMenuItem(
-        img: "assets/home/7.png",
-        title: "Кепин ороо",
-        onTap: () {},
-      ),
-      GridMenuItem(
-        img: "assets/home/11.png",
-        title: "Куран алиппеси",
-        onTap: () {},
-      ),
-      GridMenuItem(
-        img: "assets/home/12.png",
-        title: "Дубалар",
-        onTap: () {},
-      ),
+          img: "assets/home/daarat/tayammum.png",
+          title: "Таямум",
+          onTap: () {}),
     ];
   }
 
@@ -68,16 +31,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Bir Umma',
-          style: TextStyle(
-            // fontFamily: 'Anton-Regular',
-            color: Color.fromARGB(255, 56, 91, 244),
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-          ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
         ),
-        centerTitle: true,
+        title: const Text("Даарат"),
+        elevation: 1,
       ),
       body: Padding(
         padding: const EdgeInsets.only(
@@ -87,12 +48,12 @@ class _HomePageState extends State<HomePage> {
         ),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisExtent: 100,
-            crossAxisCount: 3,
-            mainAxisSpacing: 50.0,
-            crossAxisSpacing: 11.0,
+            mainAxisExtent: 150,
+            crossAxisCount: 1,
+            mainAxisSpacing: 30.0,
+            crossAxisSpacing: 50.0,
           ),
-          itemCount: 12,
+          itemCount: 3,
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
@@ -138,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                             gridMenu[index].title,
                             style: const TextStyle(
                                 height: 0,
-                                color: AppColors.yellow,
+                                color: AppColors.white,
                                 fontSize: 15,
                                 fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
