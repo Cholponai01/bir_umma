@@ -22,5 +22,6 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: QuranRoute.page),
         AutoRoute(page: QuestionAndAnswerRoute.page),
         AutoRoute(page: QuestionRoute.page),
+        AutoRoute(page: AnswerRoute.page)
       ];
 }

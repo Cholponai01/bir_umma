@@ -30,6 +30,7 @@ class QuestionPage extends StatelessWidget {
         elevation: 2,
         shadowColor: Colors.grey,
         centerTitle: true,
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: Padding(
         padding: const EdgeInsets.only(
@@ -55,6 +56,7 @@ class QuestionPage extends StatelessWidget {
                               color: Colors.black54,
                               fontSize: 18,
                               fontWeight: FontWeight.w600)),
+                      maxLines: 1,
                     ),
                     const TextField(
                       decoration: InputDecoration(

@@ -25,7 +25,7 @@ Future<void> showSendSms(BuildContext context) {
                 'Билдирүү \nжиберилди',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  height: 0,
+                  height: 1,
                   color: AppColors.black,
                   fontSize: 24,
                   fontWeight: FontWeight.w700,

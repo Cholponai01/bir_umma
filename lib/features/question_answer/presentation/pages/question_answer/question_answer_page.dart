@@ -47,8 +47,10 @@ class QuestionAndAnswerPage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const QuestionAndAnswerWidget(
-                text: 'Жооптор', icon: Icons.mail_outline)
+            QuestionAndAnswerWidget(
+                onTap: () => context.pushRoute(const AnswerRoute()),
+                text: 'Жооптор',
+                icon: Icons.mail_outline)
           ],
         ),
       ),
