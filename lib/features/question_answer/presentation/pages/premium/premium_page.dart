@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/config/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -57,6 +58,13 @@ class _PremiumPageState extends State<PremiumPage> {
                 color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w500),
             // fontFamily: 'LondrinaShadow-Regular'),
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          ElevatedButton(
+              onPressed: () =>
+                  context.pushRoute(const QuestionAndAnswerRoute()),
+              child: const Text('Суроо берүү'))
         ],
       ),
     );

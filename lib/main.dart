@@ -1,7 +1,8 @@
 import 'package:bir_umma/config/router/router.dart';
-import 'package:bir_umma/config/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import 'config/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
