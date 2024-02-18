@@ -11,7 +11,7 @@ class AnswerPage extends StatefulWidget {
 }
 
 class _AnswerPageState extends State<AnswerPage> {
-  int selectedIndex = 0;
+  List<bool> selectedIndex = List.generate(100, (index) => false);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,7 @@ class _AnswerPageState extends State<AnswerPage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.separated(
-          itemCount: 5,
+          itemCount: 10,
           itemBuilder: (BuildContext context, int index) {
             return SizedBox(
               child: DecoratedBox(
@@ -64,16 +64,16 @@ class _AnswerPageState extends State<AnswerPage> {
                           IconButton(
                               onPressed: () {
                                 setState(() {
-                                  selectedIndex = index;
+                                  selectedIndex[index] = !selectedIndex[index];
                                 });
                               },
-                              icon: index == selectedIndex
+                              icon: selectedIndex[index]
                                   ? const Icon(Icons.clear)
                                   : const Icon(Icons.keyboard_arrow_down))
                         ],
                       ),
                       Visibility(
-                        visible: selectedIndex == index,
+                        visible: selectedIndex[index],
                         child: const Column(
                           children: [
                             Divider(
