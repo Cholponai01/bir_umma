@@ -31,8 +31,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/quran/svg/main/.
     - assets/quran/images/quran/.
+    - assets/quran/svg/main/.
+    - assets/question_answer/.
+    - assets/svg/zikir/.
+  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
