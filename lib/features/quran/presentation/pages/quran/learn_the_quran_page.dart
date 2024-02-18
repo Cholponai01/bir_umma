@@ -16,30 +16,25 @@ class LearnTheQuranPage extends StatelessWidget {
         child: Scaffold(
           body: CustomScrollView(slivers: [
             SliverAppBar(
-                backgroundColor: AppColors.white,
-                floating: true,
-                elevation: 0,
-                leading: Row(
-                  children: [
-                    IconButton(
-                      icon: const Icon(
-                        Icons.arrow_back,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const QuranPage()),
-                        );
-                      },
-                    ),
-                    const SizedBox(width: 3),
-                    const Text(
-                      'Куран 0дон',
-                      style: TextStyle(color: AppColors.black, fontSize: 18),
-                    )
-                  ],
-                ))
+              backgroundColor: AppColors.white,
+              floating: true,
+              elevation: 0,
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const QuranPage()),
+                  );
+                },
+              ),
+              title: const Text(
+                'Куран 0дон',
+                style: TextStyle(color: AppColors.black, fontSize: 18),
+              ),
+            ),
           ]),
         ));
   }

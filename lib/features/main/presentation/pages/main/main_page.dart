@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage> {
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                "assets/guran/svg/main/sms.svg",
+                "assets/quran/svg/main/sms.svg",
                 width: 22,
                 height: 22,
                 color: _currentIndex == 1 ? AppColors.blue : AppColors.black,

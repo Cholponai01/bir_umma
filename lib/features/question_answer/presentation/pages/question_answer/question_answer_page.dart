@@ -19,7 +19,7 @@ class _QuestionAnswerPageState extends State<QuestionAnswerPage> {
         children: [
           Center(
             child: SvgPicture.asset(
-              "assets/svg/question_answer/Lock.svg",
+              "assets/question_answer/Lock.svg",
             ),
           ),
           const SizedBox(
