@@ -1,3 +1,4 @@
+import 'package:bir_umma/features/main/presentation/pages/home/gusul_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
@@ -17,7 +18,12 @@ class _DaaratPageState extends State<DaaratPage> {
     super.initState();
     gridMenu = [
       GridMenuItem(
-          img: "assets/home/daarat/gusul.png", title: "Гусул", onTap: () {}),
+          img: "assets/home/daarat/gusul.png",
+          title: "Гусул",
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => const GusulPage()));
+          }),
       GridMenuItem(
           img: "assets/home/daarat/daarat.png", title: "Даарат", onTap: () {}),
       GridMenuItem(
@@ -48,22 +54,15 @@ class _DaaratPageState extends State<DaaratPage> {
         ),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisExtent: 150,
+            mainAxisExtent: 180,
             crossAxisCount: 1,
             mainAxisSpacing: 30.0,
-            crossAxisSpacing: 50.0,
+            crossAxisSpacing: 50,
           ),
           itemCount: 3,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DaaratPage(),
-                  ),
-                );
-              },
+              onTap: () {},
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
@@ -93,14 +92,14 @@ class _DaaratPageState extends State<DaaratPage> {
                       padding: const EdgeInsets.all(12.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             gridMenu[index].title,
                             style: const TextStyle(
                                 height: 0,
                                 color: AppColors.white,
-                                fontSize: 15,
+                                fontSize: 20,
                                 fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                           ),
