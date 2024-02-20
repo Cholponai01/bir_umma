@@ -21,8 +21,8 @@ class _DaaratPageState extends State<DaaratPage> {
           img: "assets/home/daarat/gusul.png",
           title: "Гусул",
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => const GusulPage()));
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (_) => const GusulPage()));
           }),
       GridMenuItem(
           img: "assets/home/daarat/daarat.png", title: "Даарат", onTap: () {}),
@@ -62,7 +62,14 @@ class _DaaratPageState extends State<DaaratPage> {
           itemCount: 3,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GusulPage(),
+                  ),
+                );
+              },
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
