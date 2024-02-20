@@ -1,4 +1,5 @@
-import 'package:bir_umma/features/main/presentation/pages/home/gusul_page.dart';
+import 'package:bir_umma/features/main/presentation/pages/home/daarat_video_page.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
@@ -22,14 +23,25 @@ class _DaaratPageState extends State<DaaratPage> {
           title: "Гусул",
           onTap: () {
             // Navigator.push(
-            //     context, MaterialPageRoute(builder: (_) => const GusulPage()));
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const GusulPage(),
+            //   ),
+            // );
           }),
       GridMenuItem(
           img: "assets/home/daarat/daarat.png", title: "Даарат", onTap: () {}),
       GridMenuItem(
           img: "assets/home/daarat/tayammum.png",
           title: "Таямум",
-          onTap: () {}),
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const GusulPage(),
+            //   ),
+            // );
+          }),
     ];
   }
 
@@ -66,7 +78,7 @@ class _DaaratPageState extends State<DaaratPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const GusulPage(),
+                    builder: (context) => const DaaratVideoPage(),
                   ),
                 );
               },

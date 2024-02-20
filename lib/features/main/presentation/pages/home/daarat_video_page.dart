@@ -1,50 +1,80 @@
+import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/widgets/icon_with_counter_widget.dart';
 import 'package:flutter/material.dart';
 
-class GusulPage extends StatefulWidget {
-  const GusulPage({super.key});
+class DaaratVideoPage extends StatefulWidget {
+  const DaaratVideoPage({super.key});
 
   @override
-  State<GusulPage> createState() => _GusulPageState();
+  State<DaaratVideoPage> createState() => _DaaratVideoPageState();
 }
 
-class _GusulPageState extends State<GusulPage> {
+class _DaaratVideoPageState extends State<DaaratVideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Гусул',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
-            child: Image.asset("assets/home/daarat/icon.png"),
-          )
+            child: Image.asset(
+              "assets/home/daarat/icon.png",
+              height: 35,
+              color: AppColors.black,
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image.asset(
-                'assets/home/daarat/voda.png',
-                width: double.infinity,
-                fit: BoxFit.cover,
+              Stack(
+                children: [
+                  Image.asset(
+                    'assets/home/daarat/daarat2.png',
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                  Positioned(
+                    top: 120,
+                    left: 0,
+                    right: 0,
+                    child: Center(
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.blue,
+                              blurRadius: 15,
+                            ),
+                          ],
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Image.asset(
+                            "assets/home/daarat/youtube.png",
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Positioned(
+                    top: 250,
+                    left: 80,
+                    child: Text(
+                      "Даарат алуу боюнча кыска...",
+                      style: TextStyle(color: AppColors.black, fontSize: 25),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 15),
-              const Divider(
-                color: Colors.grey,
-                indent: 5,
-                endIndent: 5,
-              ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               const Padding(
                 padding: EdgeInsets.only(right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     IconWithCounter(icon: Icons.favorite_border, counter: 210),
                     SizedBox(width: 25),
@@ -55,7 +85,7 @@ class _GusulPageState extends State<GusulPage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 25),
+              const SizedBox(height: 20),
               const Padding(
                 padding: EdgeInsets.only(left: 20, bottom: 40),
                 child: Column(
