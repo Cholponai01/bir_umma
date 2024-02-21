@@ -11,8 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> fruits = [];
-
   List<GridMenuItem> gridMenu = [];
 
   @override
