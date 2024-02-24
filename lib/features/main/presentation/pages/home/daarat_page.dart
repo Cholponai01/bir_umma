@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/daarat_video_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/gusul_page.dart';
 
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
 
+@RoutePage()
 class DaaratPage extends StatefulWidget {
   const DaaratPage({super.key});
 
@@ -84,7 +86,7 @@ class _DaaratPageState extends State<DaaratPage> {
           itemCount: 3,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {},
+              onTap: gridMenu[index].onTap,
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
