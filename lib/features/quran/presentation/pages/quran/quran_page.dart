@@ -1,6 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/theme/app_colors.dart';
+import 'package:bir_umma/features/main/presentation/pages/main/main.dart';
+import 'package:bir_umma/features/quran/presentation/pages/quran/hadis_page.dart';
 import 'package:bir_umma/features/quran/presentation/pages/quran/learn_the_quran_page.dart';
+import 'package:bir_umma/features/quran/presentation/pages/quran/sura_page.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -12,19 +15,39 @@ class QuranPage extends StatefulWidget {
 }
 
 class _QuranPageState extends State<QuranPage> {
+  final List<String> itemTexts = [
+    "Куран 0дөн",
+    "Сүрөлөр жана хадистер",
+    "Lorem Ipsum",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MainPage()),
+            );
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
       body: ListView.builder(
         itemCount: 3,
         itemBuilder: (BuildContext context, int index) {
+          List<Widget> pages = [
+            const LearnTheQuranPage(),
+            const SuraPage(),
+            const HadisPage()
+          ];
           return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const LearnTheQuranPage()),
+                MaterialPageRoute(builder: (context) => pages[index]),
               );
             },
             child: Column(
@@ -40,8 +63,8 @@ class _QuranPageState extends State<QuranPage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         image: const DecorationImage(
-                            image: AssetImage(
-                                "assets/quran/images/quran/fon_quran.png"),
+                            image:
+                                AssetImage("assets/quran/quran/fon_quran.png"),
                             fit: BoxFit.fill),
                       ),
                       child: Stack(
@@ -77,9 +100,9 @@ class _QuranPageState extends State<QuranPage> {
                                       margin: const EdgeInsets.symmetric(
                                           horizontal: 10),
                                     ),
-                                    const Text(
-                                      "Куран окуу",
-                                      style: TextStyle(
+                                    Text(
+                                      itemTexts[index],
+                                      style: const TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.w700,
                                           color: AppColors.white,
@@ -95,7 +118,6 @@ class _QuranPageState extends State<QuranPage> {
                     ),
                   ),
                 ),
-                // const SizedBox(height: 10),
               ],
             ),
           );

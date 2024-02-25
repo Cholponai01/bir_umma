@@ -36,6 +36,9 @@ flutter:
     - assets/home/daarat/
     - assets/home/namaz/
     - assets/quran/images/quran/.
+    - assets/home/.
+    - assets/home/daarat/.
+    - assets/quran/quran/.
     - assets/quran/svg/main/.
     - assets/question_answer/.
     - assets/svg/zikir/.
