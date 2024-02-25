@@ -1,9 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/daarat_video_page.dart';
+import 'package:bir_umma/features/main/presentation/pages/home/gusul_page.dart';
 
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
 
+@RoutePage()
 class DaaratPage extends StatefulWidget {
   const DaaratPage({super.key});
 
@@ -22,25 +25,34 @@ class _DaaratPageState extends State<DaaratPage> {
           img: "assets/home/daarat/gusul.png",
           title: "Гусул",
           onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => const GusulPage(),
-            //   ),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const GusulPage(),
+              ),
+            );
           }),
       GridMenuItem(
-          img: "assets/home/daarat/daarat.png", title: "Даарат", onTap: () {}),
+          img: "assets/home/daarat/daarat.png",
+          title: "Даарат",
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DaaratVideoPage(),
+              ),
+            );
+          }),
       GridMenuItem(
           img: "assets/home/daarat/tayammum.png",
           title: "Таямум",
           onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => const GusulPage(),
-            //   ),
-            // );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const GusulPage(),
+              ),
+            );
           }),
     ];
   }
@@ -74,14 +86,7 @@ class _DaaratPageState extends State<DaaratPage> {
           itemCount: 3,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DaaratVideoPage(),
-                  ),
-                );
-              },
+              onTap: gridMenu[index].onTap,
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),

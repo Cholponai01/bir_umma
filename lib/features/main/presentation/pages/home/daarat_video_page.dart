@@ -1,6 +1,7 @@
 import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/widgets/icon_with_counter_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class DaaratVideoPage extends StatefulWidget {
   const DaaratVideoPage({super.key});
@@ -112,4 +113,49 @@ class _DaaratVideoPageState extends State<DaaratVideoPage> {
       ),
     );
   }
+
+  // PreferredSize _appBar() {
+  //   return PreferredSize(
+  //     preferredSize: Size.fromHeight(280),
+  //     child: Container(
+  //       decoration: _decoration(),
+  //       child: SafeArea(
+  //         child: Column(
+  //           children: [
+  //             _topBar(),
+  //             // SizedBox(
+  //             //   height: 5,
+  //             // ),
+  //             // _searchBox(),
+  //             // _tabBar(),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
+
+  // BoxDecoration _decoration() {
+  //   return BoxDecoration(
+  //     borderRadius: BorderRadius.vertical(
+  //       bottom: Radius.circular(10),
+  //     ),
+  //   );
+  // }
+
+  // Widget _topBar() {
+  //   return Padding(
+  //     padding: const EdgeInsets.only(right: 20),
+  //     child: Row(
+  //       mainAxisAlignment: MainAxisAlignment.start,
+  //       children: [
+  //         Image.asset(
+  //           "assets/home/daarat/voda.png",
+  //           width: double.infinity,
+  //           fit: BoxFit.cover,
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }
