@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/pages/main/main.dart';
-import 'package:bir_umma/features/quran/presentation/pages/quran/hadis_page.dart';
+import 'package:bir_umma/features/quran/presentation/pages/hadis/hadis_page.dart';
 import 'package:bir_umma/features/quran/presentation/pages/quran/learn_the_quran_page.dart';
-import 'package:bir_umma/features/quran/presentation/pages/quran/sura_page.dart';
+import 'package:bir_umma/features/quran/presentation/pages/sura/sura_page.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -41,7 +41,7 @@ class _QuranPageState extends State<QuranPage> {
           List<Widget> pages = [
             const LearnTheQuranPage(),
             const SuraPage(),
-            const HadisPage()
+            const HadisPage(),
           ];
           return GestureDetector(
             onTap: () {
