@@ -58,7 +58,10 @@ class _SuraPageState extends State<SuraPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildButton(0, "Сүрөлөр"),
+                    buildButton(
+                      0,
+                      "Сүрөлөр",
+                    ),
                     buildButton(1, "Хадистер"),
                     buildButton(2, "Сакталган"),
                   ],
