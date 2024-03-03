@@ -1,8 +1,10 @@
-
+import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/config/router/router.dart';
 import 'package:bir_umma/features/auth/presentation/widgets/login/auth_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+@RoutePage()
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
 
@@ -66,13 +68,16 @@ class SignUpPage extends StatelessWidget {
                   color: const Color(0xFF3473E6),
                   borderRadius: BorderRadius.circular(19),
                 ),
-                child: const Center(
-                  child: Text(
-                    'Катталуу',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 19,
-                        fontWeight: FontWeight.bold),
+                child: Center(
+                  child: GestureDetector(
+                    onTap: () => context.router.push(const MainRoute()),
+                    child: const Text(
+                      'Катталуу',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
