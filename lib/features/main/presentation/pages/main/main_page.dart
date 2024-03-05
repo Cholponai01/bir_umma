@@ -4,7 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/home_page.dart';
 import 'package:bir_umma/features/profile/presentation/pages/profile/profile_page.dart';
-import 'package:bir_umma/features/question_answer/presentation/pages/question_answer/question_answer_page.dart';
+import 'package:bir_umma/features/question_answer/presentation/pages/premium/premium_page.dart';
 import 'package:bir_umma/features/quran/presentation/pages/quran/quran_page.dart';
 import 'package:bir_umma/features/zikir/presentation/pages/zikir/zikir_page.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class _MainPageState extends State<MainPage> {
           },
           children: const [
             HomePage(),
-            QuestionAnswerPage(),
+            PremiumPage(),
             QuranPage(),
             ZikirPage(),
             ProfilePage()
