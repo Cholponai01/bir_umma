@@ -1,17 +1,15 @@
-import 'package:bir_umma/features/main/presentation/pages/home/namaz_ubaktary_page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class NamazPage extends StatefulWidget {
-  NamazPage({super.key});
+@RoutePage()
+class PikirPage extends StatefulWidget {
+  const PikirPage({super.key});
 
   @override
-  State<NamazPage> createState() => _NamazPageState();
+  State<PikirPage> createState() => _PikirPageState();
 }
 
-class _NamazPageState extends State<NamazPage> {
-  bool checkedValue = false;
+class _PikirPageState extends State<PikirPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,43 +65,11 @@ class _NamazPageState extends State<NamazPage> {
                               child: Image.asset("assets/home/namaz/girl.png")),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Checkbox(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            // ignore: prefer_const_constructors
-                            side: BorderSide(
-                              color: Colors.black,
-                              width: 1.0,
-                              style: BorderStyle.solid,
-                            ),
-                            visualDensity: const VisualDensity(
-                              horizontal: -1,
-                              vertical: -1,
-                            ),
-                            activeColor: Colors.white,
-                            checkColor: Colors.black,
-                            value: checkedValue,
-                            onChanged: (newValue) {
-                              setState(() {
-                                checkedValue = newValue!;
-                              });
-                            },
-                          ),
-                          const Text("Эстеп калуу")
-                        ],
+                      const Row(
+                        children: [Text("Эстеп калуу")],
                       ),
                       ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NamazUbaktary(),
-                            ),
-                          );
-                        },
+                        onPressed: () {},
                         child: Text(
                           "Баштоо",
                           style: TextStyle(color: Colors.white, fontSize: 20),

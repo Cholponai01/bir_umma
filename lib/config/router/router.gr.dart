@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MainPage(),
       );
     },
+    PikirRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PikirPage(),
+      );
+    },
     ProfileRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -98,6 +104,20 @@ class MainRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PikirPage]
+class PikirRoute extends PageRouteInfo<void> {
+  const PikirRoute({List<PageRouteInfo>? children})
+      : super(
+          PikirRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PikirRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,5 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/features/profile/presentation/pages/profile/pikir_page.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 @RoutePage()
 class ProfilePage extends StatelessWidget {
@@ -16,8 +20,10 @@ class ProfilePage extends StatelessWidget {
               icon: const Icon(
                 Icons.exit_to_app_rounded,
                 color: Colors.red,
-              ),
-              onPressed: () {},
+              ), // ваша иконка
+              onPressed: () {
+                // обработчик нажатия на иконку
+              },
             ),
           ),
         ],
@@ -73,9 +79,20 @@ class ProfilePage extends StatelessWidget {
               text: 'Бөлүшүү',
               icon: Icons.share_outlined,
             ),
-            const SettingsWidget(
-              text: 'Сунуш-пикирлер',
-              icon: Icons.error_outline,
+            GestureDetector(
+              onTap: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => const PikirPage(),
+                //   ),
+                // );
+                context.router.push(PikirRoute());
+              },
+              child: const SettingsWidget(
+                text: 'Сунуш-пикирлер',
+                icon: Icons.error_outline,
+              ),
             ),
           ],
         ),
@@ -95,12 +112,10 @@ class SettingsWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _SettingsWidgetState createState() => _SettingsWidgetState();
 }
 
 class _SettingsWidgetState extends State<SettingsWidget> {
-  // ignore: prefer_final_fields
   static List<_SettingsWidgetState> _pressedWidgets = [];
 
   bool _isPressed = false;
@@ -121,12 +136,12 @@ class _SettingsWidgetState extends State<SettingsWidget> {
         });
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Container(
           width: 400,
           height: 40,
           decoration: BoxDecoration(
-            color: _isPressed ? const Color(0xffFFDB7F) : null,
+            color: _isPressed ? Color(0xffFFDB7F) : null,
             borderRadius: BorderRadius.circular(6.0),
           ),
           child: Row(
@@ -135,7 +150,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 widget.icon,
                 color: _isPressed ? Colors.black : null,
               ),
-              const SizedBox(width: 10),
+              SizedBox(
+                width: 10,
+              ),
               Text(
                 widget.text,
                 style: TextStyle(
