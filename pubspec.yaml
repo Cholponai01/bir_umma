@@ -32,10 +32,7 @@ flutter:
 
   assets:
     # - assets/svg/main/.
-    - assets/home/
-    - assets/home/daarat/
     - assets/home/namaz/
-    # - assets/quran/images/quran/.
     - assets/home/.
     - assets/home/daarat/.
     - assets/quran/quran/.

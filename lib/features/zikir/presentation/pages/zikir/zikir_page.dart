@@ -3,6 +3,7 @@ import 'package:bir_umma/features/zikir/presentation/widgets/competition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../widgets/competition.dart';
 import '../../widgets/slide_bottom_widget.dart';
 import '../../widgets/zikir_bottom_widget.dart';
 
@@ -163,6 +164,11 @@ class _ZikirPageState extends State<ZikirPage> {
                   ),
                 ],
               ),
+            SizedBox(
+              width: 250,
+              //height: 100,
+              //color: const Color.fromARGB(255, 212, 193, 193),
+              child: Image.asset("assets/svg/zikir/count.png"),
             ),
             const SizedBox(
               height: 50,

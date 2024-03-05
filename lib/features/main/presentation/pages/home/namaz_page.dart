@@ -10,6 +10,7 @@ class NamazPage extends StatefulWidget {
 
 class _NamazPageState extends State<NamazPage> {
   bool checkedValue = false;
+  int selectedImageIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,13 +57,44 @@ class _NamazPageState extends State<NamazPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           GestureDetector(
-                            onTap: () {},
-                            child: Image.asset("assets/home/namaz/boy.png"),
+                            onTap: () {
+                              setState(() {
+                                selectedImageIndex = 0;
+                              });
+                            },
+                            child: SizedBox(
+                                child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12.0),
+                                border: Border.all(
+                                  color: selectedImageIndex == 0
+                                      ? Colors.blue
+                                      : Colors.transparent,
+                                ),
+                              ),
+                              child: Image.asset("assets/home/namaz/boy.png"),
+                            )),
                           ),
                           const SizedBox(width: 10),
                           GestureDetector(
-                              onTap: () {},
-                              child: Image.asset("assets/home/namaz/girl.png")),
+                            onTap: () {
+                              setState(() {
+                                selectedImageIndex = 1;
+                              });
+                            },
+                            child: SizedBox(
+                                child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12.0),
+                                border: Border.all(
+                                  color: selectedImageIndex == 1
+                                      ? Colors.red
+                                      : Colors.transparent,
+                                ),
+                              ),
+                              child: Image.asset("assets/home/namaz/girl.png"),
+                            )),
+                          ),
                         ],
                       ),
                       Row(
