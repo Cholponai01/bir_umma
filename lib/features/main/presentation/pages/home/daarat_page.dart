@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/daarat_video_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/gusul_page.dart';
+import 'package:bir_umma/features/profile/presentation/pages/profile/profile_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -47,12 +48,12 @@ class _DaaratPageState extends State<DaaratPage> {
           img: "assets/home/daarat/tayammum.png",
           title: "Таямум",
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const GusulPage(),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const ProfilePage(),
+            //   ),
+            // );
           }),
     ];
   }
