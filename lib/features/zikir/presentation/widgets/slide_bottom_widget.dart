@@ -31,7 +31,8 @@ class SlideBottomWidgetState extends State<SlideBottomWidget> {
           },
           child: SvgPicture.asset(
             sliderImagePath,
-            color: isSliderOpen ? Colors.blue : null,
+            colorFilter: ColorFilter.mode(
+                isSliderOpen ? Colors.blue : Colors.black, BlendMode.srcIn),
           ),
         ),
         const SizedBox(
