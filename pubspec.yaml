@@ -35,8 +35,15 @@ flutter:
 
   assets:
     - assets/svg/main/
-    - assets/svg/question_answer/
     - assets/png/
+    # - assets/svg/main/.
+    - assets/home/namaz/
+    - assets/home/.
+    - assets/home/daarat/.
+    - assets/quran/quran/.
+    - assets/quran/svg/main/.
+    - assets/question_answer/.
+    - assets/svg/zikir/.
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

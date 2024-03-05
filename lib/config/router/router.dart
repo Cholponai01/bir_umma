@@ -19,9 +19,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: ZikirRoute.page),
         AutoRoute(page: ProfileRoute.page),
         AutoRoute(page: PremiumRoute.page),
-        AutoRoute(page: QuranRoute.page),
         AutoRoute(page: QuestionAndAnswerRoute.page),
         AutoRoute(page: QuestionRoute.page),
         AutoRoute(page: AnswerRoute.page)
+        AutoRoute(page: SignInRoute.page),
+        // AutoRoute(page: DaaratRoute.page),
       ];
 }
