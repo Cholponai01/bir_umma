@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/features/zikir/presentation/widgets/competition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,6 +14,8 @@ class ZikirPage extends StatefulWidget {
   @override
   State<ZikirPage> createState() => _ZikirPageState();
 }
+
+int index = 0;
 
 class _ZikirPageState extends State<ZikirPage> {
   @override
@@ -95,9 +98,11 @@ class _ZikirPageState extends State<ZikirPage> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CompetitionWidget()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CompetitionWidget(),
+                      ),
+                    );
                   },
                   child: SvgPicture.asset(
                     "assets/svg/zikir/cup.svg",
@@ -108,6 +113,57 @@ class _ZikirPageState extends State<ZikirPage> {
             const SizedBox(
               height: 50,
             ),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  index++;
+                });
+              },
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                    "assets/svg/zikir/counter.svg",
+                    width: 200,
+                  ),
+                  Positioned(
+                    top: 55,
+                    right: 50,
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      width: 100,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        shape: BoxShape.rectangle,
+                        color: const Color.fromARGB(255, 226, 234, 11),
+                      ),
+                      child: Center(
+                        child: Text(
+                          '$index',
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 135,
+                    right: 60,
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      width: 80,
+                      height: 65,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color.fromARGB(255, 11, 182, 234),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             SizedBox(
               width: 250,
               //height: 100,
@@ -121,7 +177,7 @@ class _ZikirPageState extends State<ZikirPage> {
               width: 20,
               height: 30,
             ),
-            SlideBottomWidget(),
+            const SlideBottomWidget(),
           ],
         ),
       ),

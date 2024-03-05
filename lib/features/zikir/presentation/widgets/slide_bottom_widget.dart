@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SlideBottomWidget extends StatefulWidget {
+  const SlideBottomWidget({super.key});
+
   @override
-  _SlideBottomWidgetState createState() => _SlideBottomWidgetState();
+  SlideBottomWidgetState createState() => SlideBottomWidgetState();
 }
 
-class _SlideBottomWidgetState extends State<SlideBottomWidget> {
+class SlideBottomWidgetState extends State<SlideBottomWidget> {
   bool isSliderOpen = false;
 
   @override
@@ -29,7 +31,8 @@ class _SlideBottomWidgetState extends State<SlideBottomWidget> {
           },
           child: SvgPicture.asset(
             sliderImagePath,
-            color: isSliderOpen ? Colors.blue : null,
+            colorFilter: ColorFilter.mode(
+                isSliderOpen ? Colors.blue : Colors.black, BlendMode.srcIn),
           ),
         ),
         const SizedBox(
@@ -37,7 +40,7 @@ class _SlideBottomWidgetState extends State<SlideBottomWidget> {
         ),
         Visibility(
           visible: isSliderOpen,
-          child: Container(
+          child: SizedBox(
             width: 310,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,

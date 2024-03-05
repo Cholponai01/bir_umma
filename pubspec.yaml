@@ -31,8 +31,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/home/
-    - assets/home/daarat/
+    # - assets/svg/main/.
     - assets/home/namaz/
     - assets/home/.
     - assets/home/daarat/.

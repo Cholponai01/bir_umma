@@ -25,14 +25,14 @@ class _HomePageState extends State<HomePage> {
           title: "Даарат",
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => DaaratPage()));
+                context, MaterialPageRoute(builder: (_) => const DaaratPage()));
           }),
       GridMenuItem(
           img: "assets/home/2.png",
           title: "Намаз",
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => NamazPage()));
+                context, MaterialPageRoute(builder: (_) => const NamazPage()));
           }),
       GridMenuItem(img: "assets/home/3.png", title: "Орозо", onTap: () {}),
       GridMenuItem(

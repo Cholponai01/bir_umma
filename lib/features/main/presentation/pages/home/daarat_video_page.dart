@@ -1,7 +1,6 @@
 import 'package:bir_umma/config/theme/app_colors.dart';
 import 'package:bir_umma/features/main/presentation/widgets/icon_with_counter_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DaaratVideoPage extends StatefulWidget {
   const DaaratVideoPage({super.key});
