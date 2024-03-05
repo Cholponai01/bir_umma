@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:bir_umma/features/main/presentation/pages/home/daarat_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/home_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/main/main_page.dart';
 import 'package:bir_umma/features/profile/presentation/pages/profile/profile_page.dart';

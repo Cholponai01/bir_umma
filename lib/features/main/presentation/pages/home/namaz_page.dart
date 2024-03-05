@@ -1,10 +1,8 @@
 import 'package:bir_umma/features/main/presentation/pages/home/namaz_ubaktary_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NamazPage extends StatefulWidget {
-  NamazPage({super.key});
+  const NamazPage({super.key});
 
   @override
   State<NamazPage> createState() => _NamazPageState();
@@ -104,10 +102,6 @@ class _NamazPageState extends State<NamazPage> {
                             ),
                           );
                         },
-                        child: const Text(
-                          "Баштоо",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
@@ -115,6 +109,10 @@ class _NamazPageState extends State<NamazPage> {
                           elevation: 1,
                           backgroundColor: Colors.blue,
                           minimumSize: const Size(double.infinity, 44),
+                        ),
+                        child: const Text(
+                          "Баштоо",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ),
                     ],
