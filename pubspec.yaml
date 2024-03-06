@@ -10,20 +10,23 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.6
   flutter_bloc: ^8.1.4
   equatable: ^2.0.5
   get_it: ^7.6.7
   flutter_svg: ^2.0.9
-  firebase_core: ^2.25.3
-  firebase_auth: ^4.17.3
+  firebase_core: ^2.25.4
+  firebase_auth: ^4.17.4
+  cloud_firestore: ^4.15.4
+  firebase_storage: ^11.6.5
   auto_route: ^7.8.4
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
   auto_route_generator: ^7.3.2
   build_runner: ^2.4.8
 
@@ -31,11 +34,13 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/svg/main/.
-    - assets/home/
-    - assets/home/daarat/
+    - assets/svg/main/
+    - assets/png/
+    # - assets/svg/main/.
     - assets/home/namaz/
-    - assets/quran/images/quran/.
+    - assets/home/.
+    - assets/home/daarat/.
+    - assets/quran/quran/.
     - assets/quran/svg/main/.
     - assets/question_answer/.
     - assets/svg/zikir/.

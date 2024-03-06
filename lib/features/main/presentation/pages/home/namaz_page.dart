@@ -1,10 +1,8 @@
 import 'package:bir_umma/features/main/presentation/pages/home/namaz_ubaktary_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NamazPage extends StatefulWidget {
-  NamazPage({super.key});
+  const NamazPage({super.key});
 
   @override
   State<NamazPage> createState() => _NamazPageState();
@@ -12,6 +10,7 @@ class NamazPage extends StatefulWidget {
 
 class _NamazPageState extends State<NamazPage> {
   bool checkedValue = false;
+  int selectedImageIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,13 +57,44 @@ class _NamazPageState extends State<NamazPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           GestureDetector(
-                            onTap: () {},
-                            child: Image.asset("assets/home/namaz/boy.png"),
+                            onTap: () {
+                              setState(() {
+                                selectedImageIndex = 0;
+                              });
+                            },
+                            child: SizedBox(
+                                child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12.0),
+                                border: Border.all(
+                                  color: selectedImageIndex == 0
+                                      ? Colors.blue
+                                      : Colors.transparent,
+                                ),
+                              ),
+                              child: Image.asset("assets/home/namaz/boy.png"),
+                            )),
                           ),
                           const SizedBox(width: 10),
                           GestureDetector(
-                              onTap: () {},
-                              child: Image.asset("assets/home/namaz/girl.png")),
+                            onTap: () {
+                              setState(() {
+                                selectedImageIndex = 1;
+                              });
+                            },
+                            child: SizedBox(
+                                child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12.0),
+                                border: Border.all(
+                                  color: selectedImageIndex == 1
+                                      ? Colors.red
+                                      : Colors.transparent,
+                                ),
+                              ),
+                              child: Image.asset("assets/home/namaz/girl.png"),
+                            )),
+                          ),
                         ],
                       ),
                       Row(
@@ -98,16 +128,10 @@ class _NamazPageState extends State<NamazPage> {
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NamazUbaktary(),
-                            ),
-                          );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const NamazUbaktary()));
                         },
-                        child: Text(
-                          "Баштоо",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
@@ -115,6 +139,10 @@ class _NamazPageState extends State<NamazPage> {
                           elevation: 1,
                           backgroundColor: Colors.blue,
                           minimumSize: const Size(double.infinity, 44),
+                        ),
+                        child: const Text(
+                          "Баштоо",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       ),
                     ],

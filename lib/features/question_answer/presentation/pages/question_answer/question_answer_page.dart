@@ -1,63 +1,64 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/config/router/router.dart';
+import 'package:bir_umma/features/question_answer/presentation/widgets/widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:bir_umma/config/theme/app_colors.dart';
 
 @RoutePage()
-class QuestionAnswerPage extends StatefulWidget {
-  const QuestionAnswerPage({super.key});
+class QuestionAndAnswerPage extends StatelessWidget {
+  const QuestionAndAnswerPage({super.key});
 
-  @override
-  State<QuestionAnswerPage> createState() => _QuestionAnswerPageState();
-}
-
-class _QuestionAnswerPageState extends State<QuestionAnswerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: SvgPicture.asset(
-              "assets/question_answer/Lock.svg",
+      appBar: AppBar(
+        backgroundColor: AppColors.white,
+        leading: IconButton(
+            onPressed: () {
+              context.router.pop();
+            },
+            icon: const Icon(
+              Icons.clear,
+              size: 30,
+            )),
+        title: const Text(
+          'Суроо-жооп',
+          style: TextStyle(
+              color: Color.fromARGB(255, 132, 127, 127),
+              fontWeight: FontWeight.w600,
+              fontSize: 20),
+        ),
+        elevation: 2,
+        shadowColor: Colors.grey,
+        centerTitle: true,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            QuestionAndAnswerWidget(
+              onTap: () => context.pushRoute(const QuestionRoute()),
+              text: 'Суроо берүү',
+              icon: Icons.border_color_outlined,
             ),
-          ),
-          const SizedBox(
-            height: 80,
-          ),
-          const Text(
-            'Бул бөлүм жеткиликтүү эмес',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text(
-            'Жеткиликүү болушу үчүн төлөм\n аткарыңыз',
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(
-            height: 60,
-          ),
-          const Text('Төлөм аткаруу',
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-              )
-              // fontFamily: 'LondrinaShadow-Regular'),
-              ),
-          const SizedBox(
-            height: 30,
-          ),
-          const Text(
-            'Артка',
-            style: TextStyle(
-                color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w500),
-            // fontFamily: 'LondrinaShadow-Regular'),
-          ),
-        ],
+            const SizedBox(
+              height: 20,
+//       body: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Center(
+//             child: SvgPicture.asset(
+//               "assets/question_answer/Lock.svg",
+            ),
+            QuestionAndAnswerWidget(
+                onTap: () => context.pushRoute(const AnswerRoute()),
+                text: 'Жооптор',
+                icon: Icons.mail_outline)
+          ],
+        ),
       ),
     );
   }

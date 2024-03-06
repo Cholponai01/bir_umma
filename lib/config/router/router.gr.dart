@@ -1,12 +1,3 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
-// **************************************************************************
-// AutoRouterGenerator
-// **************************************************************************
-
-// ignore_for_file: type=lint
-// coverage:ignore-file
-
 part of 'router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
@@ -15,6 +6,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AnswerRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AnswerPage(),
+      );
+    },
     DaaratRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -33,10 +30,10 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MainPage(),
       );
     },
-    PikirRoute.name: (routeData) {
+    PremiumRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const PikirPage(),
+        child: const PremiumPage(),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -45,16 +42,28 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ProfilePage(),
       );
     },
-    QuestionAnswerRoute.name: (routeData) {
+    QuestionAndAnswerRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const QuestionAnswerPage(),
+        child: const QuestionAndAnswerPage(),
+      );
+    },
+    QuestionRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const QuestionPage(),
       );
     },
     QuranRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const QuranPage(),
+      );
+    },
+    SignInRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SignInPage(),
       );
     },
     ZikirRoute.name: (routeData) {
@@ -67,6 +76,19 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [AnswerPage]
+class AnswerRoute extends PageRouteInfo<void> {
+  const AnswerRoute({List<PageRouteInfo>? children})
+      : super(
+          AnswerRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AnswerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
 /// [DaaratPage]
 class DaaratRoute extends PageRouteInfo<void> {
   const DaaratRoute({List<PageRouteInfo>? children})
@@ -109,15 +131,15 @@ class MainRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [PikirPage]
-class PikirRoute extends PageRouteInfo<void> {
-  const PikirRoute({List<PageRouteInfo>? children})
+/// [PremiumPage]
+class PremiumRoute extends PageRouteInfo<void> {
+  const PremiumRoute({List<PageRouteInfo>? children})
       : super(
-          PikirRoute.name,
+          PremiumRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'PikirRoute';
+  static const String name = 'PremiumRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -137,15 +159,29 @@ class ProfileRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [QuestionAnswerPage]
-class QuestionAnswerRoute extends PageRouteInfo<void> {
-  const QuestionAnswerRoute({List<PageRouteInfo>? children})
+/// [QuestionAndAnswerPage]
+class QuestionAndAnswerRoute extends PageRouteInfo<void> {
+  const QuestionAndAnswerRoute({List<PageRouteInfo>? children})
       : super(
-          QuestionAnswerRoute.name,
+          QuestionAndAnswerRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'QuestionAnswerRoute';
+  static const String name = 'QuestionAndAnswerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [QuestionPage]
+class QuestionRoute extends PageRouteInfo<void> {
+  const QuestionRoute({List<PageRouteInfo>? children})
+      : super(
+          QuestionRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'QuestionRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -160,6 +196,20 @@ class QuranRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'QuranRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SignInPage]
+class SignInRoute extends PageRouteInfo<void> {
+  const SignInRoute({List<PageRouteInfo>? children})
+      : super(
+          SignInRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignInRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
