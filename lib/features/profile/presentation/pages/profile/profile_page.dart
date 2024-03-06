@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:bir_umma/features/profile/presentation/pages/profile/pikir_page.dart';
+// ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
+// ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
+import 'pikir_page.dart';
 
 @RoutePage()
 class ProfilePage extends StatelessWidget {
@@ -20,10 +21,8 @@ class ProfilePage extends StatelessWidget {
               icon: const Icon(
                 Icons.exit_to_app_rounded,
                 color: Colors.red,
-              ), // ваша иконка
-              onPressed: () {
-                // обработчик нажатия на иконку
-              },
+              ),
+              onPressed: () {},
             ),
           ),
         ],
@@ -61,7 +60,7 @@ class ProfilePage extends StatelessWidget {
                             color: Colors.black26,
                             fontWeight: FontWeight.w500)),
                   ],
-                )
+                ),
               ],
             ),
             const SizedBox(
@@ -72,7 +71,7 @@ class ProfilePage extends StatelessWidget {
               icon: Icons.settings,
             ),
             const SettingsWidget(
-              text: 'Баалаоо',
+              text: 'Баалоо',
               icon: Icons.star_border_rounded,
             ),
             const SettingsWidget(
@@ -81,13 +80,13 @@ class ProfilePage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => const PikirPage(),
-                //   ),
-                // );
-                context.router.push(PikirRoute());
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PikirPage(),
+                  ),
+                );
+                // context.router.push(PikirRoute());
               },
               child: const SettingsWidget(
                 text: 'Сунуш-пикирлер',
@@ -112,11 +111,12 @@ class SettingsWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SettingsWidgetState createState() => _SettingsWidgetState();
 }
 
 class _SettingsWidgetState extends State<SettingsWidget> {
-  static List<_SettingsWidgetState> _pressedWidgets = [];
+  static final List<_SettingsWidgetState> _pressedWidgets = [];
 
   bool _isPressed = false;
 
@@ -129,6 +129,13 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           _pressedWidgets.add(this);
           _updatePressedState();
         });
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const PikirPage(), // Замените NextPage на ваш класс следующей страницы
+          ),
+        );
       },
       onTapCancel: () {
         setState(() {
@@ -136,12 +143,12 @@ class _SettingsWidgetState extends State<SettingsWidget> {
         });
       },
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
           width: 400,
           height: 40,
           decoration: BoxDecoration(
-            color: _isPressed ? Color(0xffFFDB7F) : null,
+            color: _isPressed ? const Color(0xffFFDB7F) : null,
             borderRadius: BorderRadius.circular(6.0),
           ),
           child: Row(
@@ -150,7 +157,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 widget.icon,
                 color: _isPressed ? Colors.black : null,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Text(
@@ -168,12 +175,12 @@ class _SettingsWidgetState extends State<SettingsWidget> {
   }
 
   void _updatePressedState() {
-    _pressedWidgets.forEach((widgetState) {
+    for (var widgetState in _pressedWidgets) {
       if (widgetState != this) {
         widgetState.setState(() {
           widgetState._isPressed = false;
         });
       }
-    });
+    }
   }
 }

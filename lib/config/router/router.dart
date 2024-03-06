@@ -7,6 +7,8 @@ import 'package:bir_umma/features/question_answer/presentation/pages/question_an
 import 'package:bir_umma/features/quran/presentation/pages/quran/quran_page.dart';
 import 'package:bir_umma/features/zikir/presentation/pages/zikir/zikir_page.dart';
 
+import '../../features/profile/presentation/pages/profile/pikir_page.dart';
+
 part 'router.gr.dart';
 
 @AutoRouterConfig()
