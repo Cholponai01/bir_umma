@@ -47,12 +47,12 @@ class _DaaratPageState extends State<DaaratPage> {
           img: "assets/home/daarat/tayammum.png",
           title: "Таямум",
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const GusulPage(),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const ProfilePage(),
+            //   ),
+            // );
           }),
     ];
   }

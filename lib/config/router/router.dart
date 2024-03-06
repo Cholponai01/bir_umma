@@ -10,6 +10,9 @@ import 'package:bir_umma/features/question_answer/presentation/pages/question_an
 import 'package:bir_umma/features/quran/presentation/pages/quran/quran_page.dart';
 import 'package:bir_umma/features/zikir/presentation/pages/zikir/zikir_page.dart';
 
+import '../../features/auth/presentation/pages/login/sign_in_page.dart';
+import '../../features/main/presentation/pages/home/daarat_page.dart';
+
 part 'router.gr.dart';
 
 @AutoRouterConfig()
@@ -21,6 +24,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: QuranRoute.page),
         AutoRoute(page: ZikirRoute.page),
         AutoRoute(page: ProfileRoute.page),
+
         AutoRoute(page: PremiumRoute.page),
         AutoRoute(page: QuestionAndAnswerRoute.page),
         AutoRoute(page: QuestionRoute.page),
