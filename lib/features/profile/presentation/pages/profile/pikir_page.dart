@@ -1,10 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/profile/presentation/pages/profile/profile_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-@immutable
+@RoutePage()
 class PikirPage extends StatefulWidget {
-  const PikirPage({Key? key}) : super(key: key);
+  const PikirPage({super.key});
 
   @override
   State<PikirPage> createState() => _PikirPageState();

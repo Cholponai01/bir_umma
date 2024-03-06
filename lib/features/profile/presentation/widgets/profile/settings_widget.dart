@@ -1,3 +1,4 @@
+import 'package:bir_umma/features/profile/presentation/pages/profile/pikir_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingsWidget extends StatefulWidget {
@@ -29,6 +30,13 @@ class _SettingsWidgetState extends State<SettingsWidget> {
           _pressedWidgets.add(this);
           _updatePressedState();
         });
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const PikirPage(), // Замените NextPage на ваш класс следующей страницы
+          ),
+        );
       },
       onTapCancel: () {
         setState(() {

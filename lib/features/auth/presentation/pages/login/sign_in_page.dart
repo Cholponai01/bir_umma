@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/router/router.dart';
-import 'package:bir_umma/features/auth/presentation/pages/login/login.dart';
 import 'package:bir_umma/features/auth/presentation/widgets/login/auth_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
