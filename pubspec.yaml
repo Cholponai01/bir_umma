@@ -34,7 +34,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/svg/main/
     - assets/png/
     # - assets/svg/main/.
     - assets/home/namaz/
@@ -44,6 +43,7 @@ flutter:
     - assets/quran/svg/main/.
     - assets/question_answer/.
     - assets/svg/zikir/.
+    - assets/icons/.
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

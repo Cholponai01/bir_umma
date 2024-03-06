@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:bir_umma/config/router/router.dart';
 import 'package:bir_umma/features/auth/presentation/pages/login/login.dart';
 import 'package:bir_umma/features/auth/presentation/widgets/login/auth_text_field.dart';
 import 'package:flutter/material.dart';
@@ -17,26 +18,30 @@ class SignInPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/logo.png'),
+              // Image.asset('assets/images/logo.png'),
+              const Text("data"),
               const SizedBox(
                 height: 20,
               ),
-              AuthTextField(
+              const AuthTextField(
                 labelText: 'Аты-жөнү',
                 obscureText: false,
-                prefixIcon: SvgPicture.asset('assets/icons/user.svg',
-                    fit: BoxFit.scaleDown),
+                prefixIcon: Icon(Icons.abc),
+                // SvgPicture.asset('assets/icons/user.svg',
+                //     fit: BoxFit.scaleDown),
                 suffixIcon: null,
               ),
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                   labelText: 'Сыр сөз',
-                  prefixIcon: SvgPicture.asset('assets/icons/lock_icon.svg',
-                      fit: BoxFit.scaleDown),
-                  suffixIcon: SvgPicture.asset('assets/icons/eye-off_icon.svg',
-                      fit: BoxFit.scaleDown),
+                  prefixIcon: Icon(Icons.abc),
+                  //  SvgPicture.asset('assets/icons/lock_icon.svg',
+                  //     fit: BoxFit.scaleDown),
+                  suffixIcon: Icon(Icons.abc),
+                  // SvgPicture.asset('assets/icons/eye-off_icon.svg',
+                  //     fit: BoxFit.scaleDown),
                   obscureText: true),
               Padding(
                 padding:
@@ -60,20 +65,23 @@ class SignInPage extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(14),
-                margin: const EdgeInsets.symmetric(horizontal: 25),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF3473E6),
-                  borderRadius: BorderRadius.circular(19),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Кирүү',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 19,
-                        fontWeight: FontWeight.bold),
+              GestureDetector(
+                onTap: () => context.router.push(const MainRoute()),
+                child: Container(
+                  padding: const EdgeInsets.all(14),
+                  margin: const EdgeInsets.symmetric(horizontal: 25),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF3473E6),
+                    borderRadius: BorderRadius.circular(19),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'Кирүү',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
@@ -90,15 +98,8 @@ class SignInPage extends StatelessWidget {
               const SizedBox(
                 height: 160,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUpPage(),
-                    ),
-                  );
-                },
+              GestureDetector(
+                onTap: () => context.router.push(const SignUpRoute()),
                 child: Text(
                   'КАТТАЛУУ',
                   style: TextStyle(
@@ -138,31 +139,34 @@ class SignInPage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('assets/images/logos_google.png'),
-                  const SizedBox(
-                    width: 68,
-                  ),
-                  Image.asset('assets/images/logos_apple.png'),
-                  const SizedBox(
-                    width: 68,
-                  ),
-                  Image.asset('assets/images/logos_facebook.png')
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset('assets/icons/google.svg',
+                        width: 40, height: 40),
+                    SvgPicture.asset('assets/icons/apple.svg',
+                        width: 40, height: 40),
+                    SvgPicture.asset('assets/icons/facebook.svg',
+                        width: 40, height: 40),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 32,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 200),
-                child: Text(
-                  'Пропустить',
-                  style: TextStyle(
-                      color: Colors.grey[700],
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15),
+                child: GestureDetector(
+                  onTap: () => context.router.push(const MainRoute()),
+                  child: Text(
+                    'Пропустить',
+                    style: TextStyle(
+                        color: Colors.grey[700],
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15),
+                  ),
                 ),
               )
             ],
