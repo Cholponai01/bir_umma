@@ -128,11 +128,9 @@ class _NamazPageState extends State<NamazPage> {
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const NamazUbaktary(),
-                            ),
-                          );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const NamazUbaktary()));
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(

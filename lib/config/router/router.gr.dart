@@ -1,12 +1,3 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
-// **************************************************************************
-// AutoRouterGenerator
-// **************************************************************************
-
-// ignore_for_file: type=lint
-// coverage:ignore-file
-
 part of 'router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
@@ -19,6 +10,8 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const AnswerPage(),
+      );
+    },
     DaaratRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -92,8 +85,10 @@ class AnswerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AnswerRoute';
-  
+
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
 /// [DaaratPage]
 class DaaratRoute extends PageRouteInfo<void> {
   const DaaratRoute({List<PageRouteInfo>? children})
