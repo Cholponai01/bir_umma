@@ -46,12 +46,12 @@ class QuestionAndAnswerPage extends StatelessWidget {
             ),
             const SizedBox(
               height: 20,
-//       body: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Center(
-//             child: SvgPicture.asset(
-//               "assets/question_answer/Lock.svg",
+              // body: Column(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Center(
+              //       child: SvgPicture.asset(
+              //         "assets/question_answer/Lock.svg",
             ),
             QuestionAndAnswerWidget(
                 onTap: () => context.pushRoute(const AnswerRoute()),
