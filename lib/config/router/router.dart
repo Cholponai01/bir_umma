@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:bir_umma/features/auth/presentation/pages/login/sign_in_page.dart';
-import 'package:bir_umma/features/auth/presentation/pages/login/sign_up_page.dart';
+import 'package:bir_umma/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:bir_umma/features/auth/presentation/pages/sign_up_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/daarat_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/home/home_page.dart';
 import 'package:bir_umma/features/main/presentation/pages/main/main_page.dart';

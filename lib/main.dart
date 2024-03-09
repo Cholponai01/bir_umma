@@ -1,8 +1,10 @@
 import 'package:bir_umma/config/router/router.dart';
+import 'package:bir_umma/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bir_umma/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/theme/theme.dart';
 
@@ -33,10 +35,17 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: theme,
-      debugShowCheckedModeBanner: false,
-      routerConfig: appRoute.config(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AuthCubit(),
+        ),
+      ],
+      child: MaterialApp.router(
+        theme: theme,
+        debugShowCheckedModeBanner: false,
+        routerConfig: appRoute.config(),
+      ),
     );
   }
 }
