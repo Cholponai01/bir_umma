@@ -20,7 +20,7 @@ class _PremiumPageState extends State<PremiumPage> {
         children: [
           Center(
             child: SvgPicture.asset(
-              "assets/svg/question_answer/Lock.svg",
+              "assets/question_answer/Lock.svg",
             ),
           ),
           const SizedBox(

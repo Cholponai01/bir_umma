@@ -1,12 +1,3 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
-// **************************************************************************
-// AutoRouterGenerator
-// **************************************************************************
-
-// ignore_for_file: type=lint
-// coverage:ignore-file
-
 part of 'router.dart';
 
 abstract class _$AppRouter extends RootStackRouter {
@@ -19,6 +10,12 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const AnswerPage(),
+      );
+    },
+    DaaratRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DaaratPage(),
       );
     },
     HomeRoute.name: (routeData) {
@@ -63,6 +60,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const QuranPage(),
       );
     },
+    SignInRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SignInPage(),
+      );
+    },
+    SignUpRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SignUpPage(),
+      );
+    },
     ZikirRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -82,6 +91,19 @@ class AnswerRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AnswerRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// [DaaratPage]
+class DaaratRoute extends PageRouteInfo<void> {
+  const DaaratRoute({List<PageRouteInfo>? children})
+      : super(
+          DaaratRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DaaratRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -180,6 +202,34 @@ class QuranRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'QuranRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SignInPage]
+class SignInRoute extends PageRouteInfo<void> {
+  const SignInRoute({List<PageRouteInfo>? children})
+      : super(
+          SignInRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignInRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SignUpPage]
+class SignUpRoute extends PageRouteInfo<void> {
+  const SignUpRoute({List<PageRouteInfo>? children})
+      : super(
+          SignUpRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignUpRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

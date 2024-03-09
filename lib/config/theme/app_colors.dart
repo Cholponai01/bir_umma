@@ -6,4 +6,5 @@ class AppColors {
   static const blue = Color(0xff3473E6);
   static const green = Color(0xff34A853);
   static const grey = Colors.grey;
+  static const yellow = Color.fromARGB(207, 238, 199, 44);
 }
