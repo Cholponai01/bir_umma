@@ -24,11 +24,7 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image.asset('assets/images/logo.png'),
-              const Text("BirUmma"),
-              const SizedBox(
-                height: 20,
-              ),
+              Image.asset('assets/icons/logo.jpg'),
               const AuthTextField(
                 labelText: 'Аты-жөнү',
                 obscureText: false,
@@ -112,9 +108,7 @@ class _SignInPageState extends State<SignInPage> {
                     fontWeight: FontWeight.w500,
                     fontSize: 16),
               ),
-              const SizedBox(
-                height: 160,
-              ),
+              const SizedBox(height: 120),
               GestureDetector(
                 onTap: () => context.router.push(const SignUpRoute()),
                 child: Text(
