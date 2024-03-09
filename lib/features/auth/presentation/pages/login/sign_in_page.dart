@@ -1,13 +1,19 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/router/router.dart';
-import 'package:bir_umma/features/auth/presentation/pages/login/login.dart';
 import 'package:bir_umma/features/auth/presentation/widgets/login/auth_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
+
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  bool checkedValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,41 +25,52 @@ class SignInPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Image.asset('assets/images/logo.png'),
-              const Text("data"),
+              const Text("BirUmma"),
               const SizedBox(
                 height: 20,
               ),
               const AuthTextField(
                 labelText: 'Аты-жөнү',
                 obscureText: false,
-                prefixIcon: Icon(Icons.abc),
-                // SvgPicture.asset('assets/icons/user.svg',
-                //     fit: BoxFit.scaleDown),
                 suffixIcon: null,
+                prefixIcon: Icon(Icons.account_box),
               ),
               const SizedBox(
                 height: 10,
               ),
               const AuthTextField(
                   labelText: 'Сыр сөз',
-                  prefixIcon: Icon(Icons.abc),
-                  //  SvgPicture.asset('assets/icons/lock_icon.svg',
-                  //     fit: BoxFit.scaleDown),
-                  suffixIcon: Icon(Icons.abc),
-                  // SvgPicture.asset('assets/icons/eye-off_icon.svg',
-                  //     fit: BoxFit.scaleDown),
+                  isPasswordField: true,
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.visibility_off),
                   obscureText: true),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 39, vertical: 20),
                 child: Row(
                   children: [
-                    const Icon(
-                      Icons.circle_outlined,
-                      size: 28,
-                    ),
-                    const SizedBox(
-                      width: 10,
+                    Checkbox(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      // ignore: prefer_const_constructors
+                      side: BorderSide(
+                        color: Colors.black,
+                        width: 1.0,
+                        style: BorderStyle.solid,
+                      ),
+                      visualDensity: const VisualDensity(
+                        horizontal: -1,
+                        vertical: -1,
+                      ),
+                      activeColor: Colors.white,
+                      checkColor: Colors.black,
+                      value: checkedValue,
+                      onChanged: (newValue) {
+                        setState(() {
+                          checkedValue = newValue!;
+                        });
+                      },
                     ),
                     Text(
                       'Эстеп калуу',
