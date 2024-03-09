@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/features/zikir/presentation/widgets/competition.dart';
+import 'package:bir_umma/features/zikir/presentation/widgets/slide_bottom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../widgets/zikir_bottom_widget.dart';
@@ -26,8 +27,9 @@ class _ZikirPageState extends State<ZikirPage> {
               height: 2.0,
             )),
         title: const Text("Зикир"),
+        // elevation: 1,
       ),
-      body: Container(
+      body: DecoratedBox(
         decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(
@@ -110,25 +112,19 @@ class _ZikirPageState extends State<ZikirPage> {
             const SizedBox(
               height: 50,
             ),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  index++;
-                });
-              },
-              child: Stack(
-                children: [
-                  SvgPicture.asset(
-                    "assets/svg/zikir/counter.svg",
-                    width: 200,
-                  ),
-                  Positioned(
-                    top: 55,
-                    right: 50,
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      width: 100,
-                      height: 40,
+            Stack(
+              children: [
+                SvgPicture.asset(
+                  "assets/svg/zikir/counter.svg",
+                  width: 200,
+                ),
+                Positioned(
+                  top: 55,
+                  right: 50,
+                  child: SizedBox(
+                    width: 100,
+                    height: 40,
+                    child: DecoratedBox(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         shape: BoxShape.rectangle,
@@ -146,21 +142,29 @@ class _ZikirPageState extends State<ZikirPage> {
                       ),
                     ),
                   ),
-                  Positioned(
-                    top: 135,
-                    right: 60,
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
+                ),
+                Positioned(
+                  top: 135,
+                  right: 60,
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        index++;
+                      });
+                    },
+                    child: const SizedBox(
                       width: 80,
                       height: 65,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 11, 182, 234),
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(255, 11, 182, 234),
+                        ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             // SizedBox(
             //   width: 250,
@@ -168,27 +172,27 @@ class _ZikirPageState extends State<ZikirPage> {
             //   //color: const Color.fromARGB(255, 212, 193, 193),
             //   child: Image.asset("assets/svg/zikir/count.png"),
             // ),
-            const SizedBox(
-              height: 50,
-            ),
-            const SizedBox(
-              width: 20,
-              height: 30,
-              // SizedBox(
-              //   width: 250,
-              //   //height: 100,
-              //   //color: const Color.fromARGB(255, 212, 193, 193),
-              //   child: Image.asset("assets/svg/zikir/count.png"),
-              // ),
-              // const SizedBox(
-              //   height: 50,
-              // ),
-              // const SizedBox(
-              //   width: 20,
-              //   height: 30,
-              // ),
-              // const SlideBottomWidget(),
-            ),
+            // const SizedBox(
+            //   height: 50,
+            // ),
+            // const SizedBox(
+            //   width: 20,
+            //   height: 30,
+            // SizedBox(
+            //   width: 250,
+            //   //height: 100,
+            //   //color: const Color.fromARGB(255, 212, 193, 193),
+            //   child: Image.asset("assets/svg/zikir/count.png"),
+            // ),
+            // const SizedBox(
+            //   height: 50,
+            // ),
+            // const SizedBox(
+            //   width: 20,
+            //   height: 30,
+            // ),
+            // const SlideBottomWidget(),
+            // ),
           ],
         ),
       ),

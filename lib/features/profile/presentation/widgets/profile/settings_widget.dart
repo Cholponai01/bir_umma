@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class SettingsWidget extends StatefulWidget {
   final String text;
   final IconData? icon;
+  final VoidCallback? onPressed;
 
   const SettingsWidget({
     super.key,
     required this.text,
     this.icon,
+    this.onPressed,
   });
 
   @override
@@ -23,18 +25,26 @@ class _SettingsWidgetState extends State<SettingsWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTapDown: (_) {
-        setState(() {
-          _isPressed = true;
-          _pressedWidgets.add(this);
-          _updatePressedState();
-        });
-      },
-      onTapCancel: () {
-        setState(() {
-          _isPressed = false;
-        });
-      },
+      onTap: widget.onPressed,
+      // onTapDown: (_) {
+      //   setState(() {
+      //     _isPressed = true;
+      //     _pressedWidgets.add(this);
+      //     _updatePressedState();
+      //   });
+      //   Navigator.push(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) =>
+      //           const PikirPage(), // Замените NextPage на ваш класс следующей страницы
+      //     ),
+      //   );
+      // },
+      // onTapCancel: () {
+      //   setState(() {
+      //     _isPressed = false;
+      //   });
+      // },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
