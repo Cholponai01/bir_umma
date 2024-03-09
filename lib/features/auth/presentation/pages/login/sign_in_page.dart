@@ -18,50 +18,40 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Image.asset('assets/images/logo.png'),
-              const Text("data"),
-              const SizedBox(
-                height: 20,
-              ),
-              const AuthTextField(
-                labelText: 'Аты-жөнү',
-                obscureText: false,
-                suffixIcon: null,
-                prefixIcon: Icon(Icons.account_box),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const AuthTextField(
-                  labelText: 'Сыр сөз',
-                  isPasswordField: true,
-                  prefixIcon: Icon(Icons.lock),
-                  suffixIcon: Icon(Icons.visibility_off),
-                  obscureText: true),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 39, vertical: 20),
-                child: Row(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/png/LOGO.png'),
+                const SizedBox(
+                  height: 15,
+                ),
+                const AuthTextField(
+                  labelText: 'Email Адрес',
+                  obscureText: false,
+                  suffixIcon: null,
+                  prefixIcon: Icon(Icons.account_box),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const AuthTextField(
+                    labelText: 'Сыр сөз',
+                    isPasswordField: true,
+                    prefixIcon: Icon(Icons.lock),
+                    suffixIcon: Icon(Icons.visibility_off),
+                    obscureText: true),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
                   children: [
                     Checkbox(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-                      ),
-                      // ignore: prefer_const_constructors
-                      side: BorderSide(
-                        color: Colors.black,
-                        width: 1.0,
-                        style: BorderStyle.solid,
-                      ),
-                      visualDensity: const VisualDensity(
-                        horizontal: -1,
-                        vertical: -1,
                       ),
                       activeColor: Colors.white,
                       checkColor: Colors.black,
@@ -81,56 +71,55 @@ class _SignInPageState extends State<SignInPage> {
                     )
                   ],
                 ),
-              ),
-              GestureDetector(
-                onTap: () => context.router.push(const MainRoute()),
-                child: Container(
-                  padding: const EdgeInsets.all(14),
-                  margin: const EdgeInsets.symmetric(horizontal: 25),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF3473E6),
-                    borderRadius: BorderRadius.circular(19),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Кирүү',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
-                          fontWeight: FontWeight.bold),
+                const SizedBox(
+                  height: 50,
+                ),
+                GestureDetector(
+                  onTap: () => context.router.push(const MainRoute()),
+                  child: Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF3473E6),
+                      borderRadius: BorderRadius.circular(19),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Кирүү',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 17,
-              ),
-              Text(
-                'Сыр сөздү унутутуңузбу?',
-                style: TextStyle(
-                    color: Colors.grey[700],
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16),
-              ),
-              const SizedBox(
-                height: 160,
-              ),
-              GestureDetector(
-                onTap: () => context.router.push(const SignUpRoute()),
-                child: Text(
-                  'КАТТАЛУУ',
-                  style: TextStyle(
-                      color: Colors.blue[500],
-                      fontWeight: FontWeight.w500,
-                      fontSize: 17),
+                const SizedBox(
+                  height: 17,
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.0),
-                child: Row(
+                Text(
+                  'Сыр сөздү унутутуңузбу?',
+                  style: TextStyle(
+                      color: Colors.grey[700],
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                GestureDetector(
+                  onTap: () => context.router.push(const SignUpRoute()),
+                  child: Text(
+                    'КАТТАЛУУ',
+                    style: TextStyle(
+                        color: Colors.blue[500],
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
                   children: [
                     Expanded(
                       child: Divider(
@@ -152,41 +141,44 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 60.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SvgPicture.asset('assets/icons/google.svg',
-                        width: 40, height: 40),
-                    SvgPicture.asset('assets/icons/apple.svg',
-                        width: 40, height: 40),
-                    SvgPicture.asset('assets/icons/facebook.svg',
-                        width: 40, height: 40),
-                  ],
+                const SizedBox(
+                  height: 20,
                 ),
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 200),
-                child: GestureDetector(
-                  onTap: () => context.router.push(const MainRoute()),
-                  child: Text(
-                    'Пропустить',
-                    style: TextStyle(
-                        color: Colors.grey[700],
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SvgPicture.asset('assets/icons/google.svg',
+                          width: 40, height: 40),
+                      SvgPicture.asset('assets/icons/apple.svg',
+                          width: 40, height: 40),
+                      SvgPicture.asset('assets/icons/facebook.svg',
+                          width: 40, height: 40),
+                    ],
                   ),
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 32,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 200),
+                  child: GestureDetector(
+                    onTap: () => context.router.push(const MainRoute()),
+                    child: Text(
+                      'Пропустить',
+                      style: TextStyle(
+                          color: Colors.grey[700],
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                )
+              ],
+            ),
           ),
         ),
       ),
