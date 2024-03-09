@@ -24,7 +24,8 @@ class SignUpPage extends StatelessWidget {
               AuthTextField(
                 labelText: 'Email же тел.номер',
                 obscureText: false,
-                prefixIcon: Icon(Icons.ac_unit),
+                prefixIcon: Icon(Icons.email),
+
                 // SvgPicture.asset('assets/icons/mail.svg',
                 //     fit: BoxFit.scaleDown),
                 suffixIcon: null,
@@ -35,7 +36,7 @@ class SignUpPage extends StatelessWidget {
               AuthTextField(
                 labelText: 'Аты-жөнү',
                 obscureText: false,
-                prefixIcon: Icon(Icons.ac_unit),
+                prefixIcon: Icon(Icons.account_box),
                 // SvgPicture.asset('assets/icons/user.svg',
                 //     fit: BoxFit.scaleDown),
                 suffixIcon: null,
@@ -43,26 +44,20 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                   labelText: 'Сыр сөз',
-                  prefixIcon: Icon(Icons.ac_unit),
-                  // SvgPicture.asset('assets/icons/lock_icon.svg',
-                  //     fit: BoxFit.scaleDown),
-                  suffixIcon: Icon(Icons.ac_unit),
-                  //  SvgPicture.asset('assets/icons/eye-off_icon.svg',
-                  //     fit: BoxFit.scaleDown),
+                  prefixIcon: Icon(Icons.lock),
+                  isPasswordField: true,
+                  suffixIcon: Icon(Icons.visibility_off),
                   obscureText: true),
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                   labelText: 'Сыр сөзду кайталап жазыңыз',
-                  prefixIcon: Icon(Icons.ac_unit),
-                  // SvgPicture.asset('assets/icons/lock_icon.svg',
-                  //     fit: BoxFit.scaleDown),
-                  suffixIcon: Icon(Icons.ac_unit),
-                  // SvgPicture.asset('assets/icons/eye-off_icon.svg',
-                  //     fit: BoxFit.scaleDown),
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.visibility_off),
+                  isPasswordField: true,
                   obscureText: true),
               const SizedBox(
                 height: 210,

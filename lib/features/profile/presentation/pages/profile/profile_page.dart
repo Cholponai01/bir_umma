@@ -83,14 +83,13 @@ class _ProfilePageState extends State<ProfilePage> {
               text: 'Бөлүшүү',
               icon: Icons.share_outlined,
             ),
-            // GestureDetector(
-            //   onTap: () => context.router.push(const PikirRoute()),
-            //   child:
-            const SettingsWidget(
-              text: 'Сунуш-пикирлер',
-              icon: Icons.error_outline,
+            GestureDetector(
+              onTap: () => context.router.push(const PikirRoute()),
+              child: const SettingsWidget(
+                text: 'Сунуш-пикирлер',
+                icon: Icons.error_outline,
+              ),
             ),
-            // ),
           ],
         ),
       ),
