@@ -17,8 +17,8 @@ class SignInPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image.asset('assets/images/logo.png'),
-              const Text("data"),
+              Image.asset('assets/png/check-circle.png'),
+              const Text("Катталуу"),
               const SizedBox(
                 height: 20,
               ),

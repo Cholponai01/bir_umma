@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Bir Umma',
+          'Бир Умма',
           style: TextStyle(
             // fontFamily: 'Anton-Regular',
             color: Color.fromARGB(255, 56, 91, 244),
@@ -89,17 +89,13 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(
-          top: 16,
-          left: 16,
-          right: 16,
-        ),
+        padding: const EdgeInsets.all(16),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisExtent: 100,
+            mainAxisExtent: 135,
             crossAxisCount: 3,
-            mainAxisSpacing: 50.0,
-            crossAxisSpacing: 11.0,
+            mainAxisSpacing: 10.0,
+            crossAxisSpacing: 10.0,
           ),
           itemCount: 12,
           itemBuilder: (context, index) {
