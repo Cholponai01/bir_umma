@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:bir_umma/config/router/router.dart';
 import 'package:bir_umma/features/auth/presentation/widgets/login/auth_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
 class SignUpPage extends StatelessWidget {
@@ -22,7 +21,7 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              AuthTextField(
+              const AuthTextField(
                 labelText: 'Email же тел.номер',
                 obscureText: false,
                 prefixIcon: Icon(Icons.ac_unit),
@@ -33,7 +32,7 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                 labelText: 'Аты-жөнү',
                 obscureText: false,
                 prefixIcon: Icon(Icons.ac_unit),
@@ -44,7 +43,7 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                   labelText: 'Сыр сөз',
                   prefixIcon: Icon(Icons.ac_unit),
                   // SvgPicture.asset('assets/icons/lock_icon.svg',
@@ -56,7 +55,7 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AuthTextField(
+              const AuthTextField(
                   labelText: 'Сыр сөзду кайталап жазыңыз',
                   prefixIcon: Icon(Icons.ac_unit),
                   // SvgPicture.asset('assets/icons/lock_icon.svg',

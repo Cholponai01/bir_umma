@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:bir_umma/features/profile/presentation/widgets/profile/settings_widget.dart';
 import 'package:flutter/material.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
@@ -115,9 +114,9 @@ class SettingsWidget extends StatefulWidget {
 }
 
 class _SettingsWidgetState extends State<SettingsWidget> {
-  static final List<_SettingsWidgetState> _pressedWidgets = [];
+  // static final List<_SettingsWidgetState> _pressedWidgets = [];
 
-  bool _isPressed = false;
+  // bool _isPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -136,120 +135,122 @@ class _SettingsWidgetState extends State<SettingsWidget> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icons/user.jpg',
-                  width: 65,
-                  height: 65,
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                const Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Аты-жөнү',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600)),
-                    Text('+996700123456',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Color(0xffE5E5E5),
-                            fontWeight: FontWeight.bold)),
-                    Text('atyjonu@gmail.com',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Color(0xffE5E5E5),
-                            fontWeight: FontWeight.bold)),
-                  ],
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const SettingsWidget(
-              text: 'Профильди оңдоо',
-              icon: Icons.settings,
-            ),
-            const SettingsWidget(
-              text: 'Баалоо',
-              icon: Icons.star_border_rounded,
-            ),
-            const SettingsWidget(
-              text: 'Бөлүшүү',
-              icon: Icons.share_outlined,
-            ),
-            const SettingsWidget(
-              text: 'Сунуш-пикирлер',
-              icon: Icons.error_outline,
-            ),
-          ],
-    return GestureDetector(
-      onTapDown: (_) {
-        setState(() {
-          _isPressed = true;
-          _pressedWidgets.add(this);
-          _updatePressedState();
-        });
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) =>
-                const PikirPage(), // Замените NextPage на ваш класс следующей страницы
-          ),
-        );
-      },
-      onTapCancel: () {
-        setState(() {
-          _isPressed = false;
-        });
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          width: 400,
-          height: 40,
-          decoration: BoxDecoration(
-            color: _isPressed ? const Color(0xffFFDB7F) : null,
-            borderRadius: BorderRadius.circular(6.0),
-          ),
-          child: Row(
+        child: Column(children: [
+          Row(
             children: [
-              Icon(
-                widget.icon,
-                color: _isPressed ? Colors.black : null,
+              Image.asset(
+                'assets/icons/user.jpg',
+                width: 65,
+                height: 65,
               ),
               const SizedBox(
-                width: 10,
+                width: 20,
               ),
-              Text(
-                widget.text,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: _isPressed ? Colors.black : Colors.black,
-                ),
-              ),
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Аты-жөнү',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600)),
+                  Text('+996700123456',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xffE5E5E5),
+                          fontWeight: FontWeight.bold)),
+                  Text('atyjonu@gmail.com',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xffE5E5E5),
+                          fontWeight: FontWeight.bold)),
+                ],
+              )
             ],
           ),
-        ),
+          const SizedBox(
+            height: 30,
+          ),
+          const SettingsWidget(
+            text: 'Профильди оңдоо',
+            icon: Icons.settings,
+          ),
+          const SettingsWidget(
+            text: 'Баалоо',
+            icon: Icons.star_border_rounded,
+          ),
+          const SettingsWidget(
+            text: 'Бөлүшүү',
+            icon: Icons.share_outlined,
+          ),
+          const SettingsWidget(
+            text: 'Сунуш-пикирлер',
+            icon: Icons.error_outline,
+          ),
+        ]
+            // return GestureDetector(
+            //   onTapDown: (_) {
+            //     setState(() {
+            //       _isPressed = true;
+            //       _pressedWidgets.add(this);
+            //       _updatePressedState();
+            //     });
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) =>
+            //             const PikirPage(), // Замените NextPage на ваш класс следующей страницы
+            //       ),
+            //     );
+            //   },
+            //   onTapCancel: () {
+            //     setState(() {
+            //       _isPressed = false;
+            //     });
+            //   },
+            //   child: Padding(
+            //     padding: const EdgeInsets.all(8.0),
+            //     child: Container(
+            //       width: 400,
+            //       height: 40,
+            //       decoration: BoxDecoration(
+            //         color: _isPressed ? const Color(0xffFFDB7F) : null,
+            //         borderRadius: BorderRadius.circular(6.0),
+            //       ),
+            //       child: Row(
+            //         children: [
+            //           Icon(
+            //             widget.icon,
+            //             color: _isPressed ? Colors.black : null,
+            //           ),
+            //           const SizedBox(
+            //             width: 10,
+            //           ),
+            //           Text(
+            //             widget.text,
+            //             style: TextStyle(
+            //               fontSize: 16,
+            //               color: _isPressed ? Colors.black : Colors.black,
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // );
+            ),
       ),
     );
   }
 
-  void _updatePressedState() {
-    for (var widgetState in _pressedWidgets) {
-      if (widgetState != this) {
-        widgetState.setState(() {
-          widgetState._isPressed = false;
-        });
-      }
-    }
-  }
+  // void _updatePressedState() {
+  //   for (var widgetState in _pressedWidgets) {
+  //     if (widgetState != this) {
+  //       widgetState.setState(() {
+  //         widgetState._isPressed = false;
+  //       });
+  //     }
+  //   }
+  // }
 }
