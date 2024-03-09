@@ -110,7 +110,7 @@ class _ZikirPageState extends State<ZikirPage> {
               ],
             ),
             const SizedBox(
-              height: 50,
+              height: 90,
             ),
             Stack(
               children: [
