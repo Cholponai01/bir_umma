@@ -16,12 +16,11 @@ class SignUpPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("data"),
-              // Image.asset('assets/images/logo.png'),
+              Image.asset('assets/icons/logo.jpg'),
               const SizedBox(
                 height: 25,
               ),
-              AuthTextField(
+              const AuthTextField(
                 labelText: 'Email же тел.номер',
                 obscureText: false,
                 prefixIcon: Icon(Icons.email),
