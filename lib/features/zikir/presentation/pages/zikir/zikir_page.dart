@@ -180,18 +180,18 @@ class _ZikirPageState extends State<ZikirPage> {
             //   height: 30,
             // SizedBox(
             //   width: 250,
-            //   //height: 100,
-            //   //color: const Color.fromARGB(255, 212, 193, 193),
+            //   height: 100,
+            //   // color: const Color.fromARGB(255, 212, 193, 193),
             //   child: Image.asset("assets/svg/zikir/count.png"),
             // ),
             // const SizedBox(
             //   height: 50,
             // ),
-            // const SizedBox(
-            //   width: 20,
-            //   height: 30,
-            // ),
-            // const SlideBottomWidget(),
+            const SizedBox(
+              width: 20,
+              height: 30,
+            ),
+            const SlideBottomWidget(),
             // ),
           ],
         ),

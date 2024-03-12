@@ -27,8 +27,8 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: QuestionAndAnswerRoute.page),
         AutoRoute(page: QuestionRoute.page),
         AutoRoute(page: AnswerRoute.page),
-        AutoRoute(page: SignInRoute.page),
-        AutoRoute(page: SignUpRoute.page, initial: true),
+        AutoRoute(page: SignInRoute.page, initial: true),
+        AutoRoute(page: SignUpRoute.page),
         AutoRoute(page: DaaratRoute.page),
       ];
 }
