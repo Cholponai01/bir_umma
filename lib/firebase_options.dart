@@ -47,29 +47,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBeszW8nYiAh6tfLBCUDIJARnYergqdR2I',
-    appId: '1:697433015250:web:87387188642e1cd3057e0b',
-    messagingSenderId: '697433015250',
-    projectId: 'bir-umma-fae1b',
-    authDomain: 'bir-umma-fae1b.firebaseapp.com',
-    storageBucket: 'bir-umma-fae1b.appspot.com',
-    measurementId: 'G-WQNH698GV8',
+    apiKey: 'AIzaSyAlKv12QMyGfl3XsCLw5bXTwUu4vMxN9Y4',
+    appId: '1:538202085420:web:d3fcec063c6d614d829989',
+    messagingSenderId: '538202085420',
+    projectId: 'bir-umma-2b741',
+    authDomain: 'bir-umma-2b741.firebaseapp.com',
+    storageBucket: 'bir-umma-2b741.appspot.com',
+    measurementId: 'G-37JJB4W5EK',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA8DxqNB7PNVaAbqePH_17oOWS9kNs5xGo',
-    appId: '1:697433015250:android:6b88686cafb3b715057e0b',
-    messagingSenderId: '697433015250',
-    projectId: 'bir-umma-fae1b',
-    storageBucket: 'bir-umma-fae1b.appspot.com',
+    apiKey: 'AIzaSyDz90yjadVoBb-XKMMCzFHLkYWHliVJ-i0',
+    appId: '1:538202085420:android:31b322a4c55dcd7d829989',
+    messagingSenderId: '538202085420',
+    projectId: 'bir-umma-2b741',
+    storageBucket: 'bir-umma-2b741.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDslyVu0vxlvYzwxZqfDSiyP_yusKp1FX4',
-    appId: '1:697433015250:ios:36ada286024a2fa6057e0b',
-    messagingSenderId: '697433015250',
-    projectId: 'bir-umma-fae1b',
-    storageBucket: 'bir-umma-fae1b.appspot.com',
+    apiKey: 'AIzaSyBysIwKw0XkMUXxoF_Kf-k3emFL7H3fXmA',
+    appId: '1:538202085420:ios:6df38ef95b90c0b0829989',
+    messagingSenderId: '538202085420',
+    projectId: 'bir-umma-2b741',
+    storageBucket: 'bir-umma-2b741.appspot.com',
+    androidClientId: '538202085420-ljrhenm4869ivjtnhj96bv77idjmkfr8.apps.googleusercontent.com',
+    iosClientId: '538202085420-ekrh40qfdiatglmae5nkh4poggo9idff.apps.googleusercontent.com',
     iosBundleId: 'com.example.birUmma',
   );
 }

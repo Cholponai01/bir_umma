@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "697433015250",
-    "project_id": "bir-umma-fae1b",
-    "storage_bucket": "bir-umma-fae1b.appspot.com"
+    "project_number": "538202085420",
+    "project_id": "bir-umma-2b741",
+    "storage_bucket": "bir-umma-2b741.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:697433015250:android:6b88686cafb3b715057e0b",
+        "mobilesdk_app_id": "1:538202085420:android:31b322a4c55dcd7d829989",
         "android_client_info": {
           "package_name": "com.example.bir_umma"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "538202085420-ljrhenm4869ivjtnhj96bv77idjmkfr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bir_umma",
+            "certificate_hash": "79543c03b9250c94fdcfb6b7b443167b7721810b"
+          }
+        },
+        {
+          "client_id": "538202085420-23jbuc2t46fl246o8pj7n6dsubmc0lqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyA8DxqNB7PNVaAbqePH_17oOWS9kNs5xGo"
+          "current_key": "AIzaSyDz90yjadVoBb-XKMMCzFHLkYWHliVJ-i0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538202085420-23jbuc2t46fl246o8pj7n6dsubmc0lqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
