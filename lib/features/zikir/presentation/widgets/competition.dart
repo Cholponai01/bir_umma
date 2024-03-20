@@ -121,8 +121,7 @@ class CompetitionWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
-                        color:
-                            const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3),
+                        color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3),
                         width: 1.0,
                       ),
                     ),

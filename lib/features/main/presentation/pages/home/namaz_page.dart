@@ -49,8 +49,7 @@ class _NamazPageState extends State<NamazPage> {
                       const Center(
                         child: Text(
                           "Сиз?",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                       ),
                       Row(
@@ -67,9 +66,7 @@ class _NamazPageState extends State<NamazPage> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12.0),
                                 border: Border.all(
-                                  color: selectedImageIndex == 0
-                                      ? Colors.blue
-                                      : Colors.transparent,
+                                  color: selectedImageIndex == 0 ? Colors.blue : Colors.transparent,
                                 ),
                               ),
                               child: Image.asset("assets/home/namaz/boy.png"),
@@ -87,9 +84,7 @@ class _NamazPageState extends State<NamazPage> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12.0),
                                 border: Border.all(
-                                  color: selectedImageIndex == 1
-                                      ? Colors.red
-                                      : Colors.transparent,
+                                  color: selectedImageIndex == 1 ? Colors.red : Colors.transparent,
                                 ),
                               ),
                               child: Image.asset("assets/home/namaz/girl.png"),
@@ -127,10 +122,7 @@ class _NamazPageState extends State<NamazPage> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (_) => const NamazUbaktary()));
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => const NamazUbaktary()));
                         },
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(

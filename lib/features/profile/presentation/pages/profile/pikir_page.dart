@@ -87,18 +87,13 @@ class _PikirPageState extends State<PikirPage> {
                         },
                         child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => ProfilePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => ProfilePage()));
                           },
                           child: Text(
                             "Артка",
                             style: TextStyle(
                               fontSize: 20,
-                              color: _isPressed
-                                  ? Colors.blue
-                                  : Colors.grey.shade400,
+                              color: _isPressed ? Colors.blue : Colors.grey.shade400,
                             ),
                           ),
                         ),
@@ -115,9 +110,7 @@ class _PikirPageState extends State<PikirPage> {
                           "Жөнөтүү",
                           style: TextStyle(
                             fontSize: 20,
-                            color: _isPressed2
-                                ? Colors.blue
-                                : Colors.grey.shade400,
+                            color: _isPressed2 ? Colors.blue : Colors.grey.shade400,
                           ),
                         ),
                       )
@@ -146,10 +139,7 @@ class _PikirPageState extends State<PikirPage> {
             children: [
               const Text(
                 "Ыраазычылык \nбилдиребиз!",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600),
+                style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 15),

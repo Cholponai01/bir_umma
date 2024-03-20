@@ -41,8 +41,7 @@ class _SignInPageState extends State<SignInPage> {
                   suffixIcon: Icon(Icons.visibility_off),
                   obscureText: true),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 39, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 39, vertical: 20),
                 child: Row(
                   children: [
                     Checkbox(
@@ -70,10 +69,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     Text(
                       'Эстеп калуу',
-                      style: TextStyle(
-                          color: Colors.grey[700],
-                          fontWeight: FontWeight.w500,
-                          fontSize: 17),
+                      style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 17),
                     )
                   ],
                 ),
@@ -90,10 +86,7 @@ class _SignInPageState extends State<SignInPage> {
                   child: const Center(
                     child: Text(
                       'Кирүү',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -103,20 +96,14 @@ class _SignInPageState extends State<SignInPage> {
               ),
               Text(
                 'Сыр сөздү унутутуңузбу?',
-                style: TextStyle(
-                    color: Colors.grey[700],
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16),
+                style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 16),
               ),
               const SizedBox(height: 120),
               GestureDetector(
                 onTap: () => context.router.push(const SignUpRoute()),
                 child: Text(
                   'КАТТАЛУУ',
-                  style: TextStyle(
-                      color: Colors.blue[500],
-                      fontWeight: FontWeight.w500,
-                      fontSize: 17),
+                  style: TextStyle(color: Colors.blue[500], fontWeight: FontWeight.w500, fontSize: 17),
                 ),
               ),
               const SizedBox(
@@ -155,12 +142,9 @@ class _SignInPageState extends State<SignInPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SvgPicture.asset('assets/icons/google.svg',
-                        width: 40, height: 40),
-                    SvgPicture.asset('assets/icons/apple.svg',
-                        width: 40, height: 40),
-                    SvgPicture.asset('assets/icons/facebook.svg',
-                        width: 40, height: 40),
+                    SvgPicture.asset('assets/icons/google.svg', width: 40, height: 40),
+                    SvgPicture.asset('assets/icons/apple.svg', width: 40, height: 40),
+                    SvgPicture.asset('assets/icons/facebook.svg', width: 40, height: 40),
                   ],
                 ),
               ),
@@ -173,10 +157,7 @@ class _SignInPageState extends State<SignInPage> {
                   onTap: () => context.router.push(const MainRoute()),
                   child: Text(
                     'Пропустить',
-                    style: TextStyle(
-                        color: Colors.grey[700],
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15),
+                    style: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w500, fontSize: 15),
                   ),
                 ),
               )

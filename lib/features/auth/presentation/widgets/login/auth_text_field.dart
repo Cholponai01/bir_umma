@@ -33,10 +33,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
         decoration: InputDecoration(
           labelText: widget.labelText,
           alignLabelWithHint: true,
-          labelStyle: TextStyle(
-              color: Colors.grey[700],
-              fontWeight: FontWeight.w400,
-              fontSize: 19),
+          labelStyle: TextStyle(color: Colors.grey[700], fontWeight: FontWeight.w400, fontSize: 19),
           hoverColor: Colors.white,
           suffixIcon: GestureDetector(
             onTap: () {
@@ -47,9 +44,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
             child: widget.isPasswordField == true
                 ? Icon(
                     _obscureText ? Icons.visibility_off : Icons.visibility,
-                    color: _obscureText == false
-                        ? AppColors.black
-                        : AppColors.grey,
+                    color: _obscureText == false ? AppColors.black : AppColors.grey,
                     size: 24,
                   )
                 : const Text(""),

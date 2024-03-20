@@ -114,10 +114,7 @@ class _NamazUbaktaryState extends State<NamazUbaktary> {
                           Text(
                             gridMenu[index].title,
                             style: const TextStyle(
-                                height: 0,
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700),
+                                height: 0, color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                           ),
                         ],

@@ -40,10 +40,7 @@ Future<void> showSendSms(BuildContext context) {
                   },
                   child: const Text(
                     'ОK',
-                    style: TextStyle(
-                        color: AppColors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600),
+                    style: TextStyle(color: AppColors.blue, fontSize: 20, fontWeight: FontWeight.w600),
                   ))
             ],
           ),

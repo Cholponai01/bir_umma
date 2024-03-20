@@ -73,10 +73,7 @@ class SignUpPage extends StatelessWidget {
                   child: const Center(
                     child: Text(
                       'Катталуу',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
-                          fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),

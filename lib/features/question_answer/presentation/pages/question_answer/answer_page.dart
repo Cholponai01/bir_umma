@@ -27,10 +27,7 @@ class _AnswerPageState extends State<AnswerPage> {
             )),
         title: const Text(
           'Суроо-жооп',
-          style: TextStyle(
-              color: Color.fromARGB(255, 132, 127, 127),
-              fontWeight: FontWeight.w600,
-              fontSize: 20),
+          style: TextStyle(color: Color.fromARGB(255, 132, 127, 127), fontWeight: FontWeight.w600, fontSize: 20),
         ),
         elevation: 2,
         shadowColor: Colors.grey,
@@ -58,8 +55,7 @@ class _AnswerPageState extends State<AnswerPage> {
                         children: [
                           const Text(
                             'dffdfdffdfmammam   shshsbdbdb',
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w600),
+                            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                           ),
                           IconButton(
                               onPressed: () {

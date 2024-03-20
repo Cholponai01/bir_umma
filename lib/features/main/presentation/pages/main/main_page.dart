@@ -42,13 +42,7 @@ class _MainPageState extends State<MainPage> {
             _currentIndex = value;
             setState(() {});
           },
-          children: const [
-            HomePage(),
-            PremiumPage(),
-            QuranPage(),
-            ZikirPage(),
-            ProfilePage()
-          ],
+          children: const [HomePage(), PremiumPage(), QuranPage(), ZikirPage(), ProfilePage()],
         ),
       ),
       bottomNavigationBar: Theme(
