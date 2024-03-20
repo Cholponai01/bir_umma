@@ -63,9 +63,7 @@ class _QuranPageState extends State<QuranPage> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         image: const DecorationImage(
-                            image:
-                                AssetImage("assets/quran/quran/fon_quran.png"),
-                            fit: BoxFit.fill),
+                            image: AssetImage("assets/quran/quran/fon_quran.png"), fit: BoxFit.fill),
                       ),
                       child: Stack(
                         children: [
@@ -76,10 +74,7 @@ class _QuranPageState extends State<QuranPage> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
                                   gradient: LinearGradient(
-                                    colors: [
-                                      AppColors.black.withOpacity(0),
-                                      AppColors.black
-                                    ],
+                                    colors: [AppColors.black.withOpacity(0), AppColors.black],
                                     begin: const Alignment(0.00, -1.00),
                                     end: const Alignment(0.00, 1.8),
                                   ),
@@ -97,16 +92,12 @@ class _QuranPageState extends State<QuranPage> {
                                       height: 50,
                                       width: 2,
                                       color: AppColors.white,
-                                      margin: const EdgeInsets.symmetric(
-                                          horizontal: 10),
+                                      margin: const EdgeInsets.symmetric(horizontal: 10),
                                     ),
                                     Text(
                                       itemTexts[index],
                                       style: const TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w700,
-                                          color: AppColors.white,
-                                          height: 0),
+                                          fontSize: 20, fontWeight: FontWeight.w700, color: AppColors.white, height: 0),
                                     ),
                                   ],
                                 )

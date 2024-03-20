@@ -35,10 +35,7 @@ class QuestionAndAnswerWidget extends StatelessWidget {
                 ),
                 Text(
                   text,
-                  style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.grey),
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.grey),
                 )
               ],
             )),

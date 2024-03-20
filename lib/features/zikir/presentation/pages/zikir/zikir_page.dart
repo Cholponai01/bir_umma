@@ -79,8 +79,7 @@ class _ZikirPageState extends State<ZikirPage> {
                       ),
                       Text(
                         "Ля иляха илля Анта! Субханака, инни кунту мина-з-залимин!",
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(

@@ -24,21 +24,17 @@ class _HomePageState extends State<HomePage> {
           img: "assets/home/1.png",
           title: "Даарат",
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => const DaaratPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (_) => const DaaratPage()));
           }),
       GridMenuItem(
           img: "assets/home/2.png",
           title: "Намаз",
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => const NamazPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (_) => const NamazPage()));
           }),
       GridMenuItem(img: "assets/home/3.png", title: "Орозо", onTap: () {}),
-      GridMenuItem(
-          img: "assets/home/4.png", title: "Ажылык Умра", onTap: () {}),
-      GridMenuItem(
-          img: "assets/home/5.png", title: "Зекет Садака", onTap: () {}),
+      GridMenuItem(img: "assets/home/4.png", title: "Ажылык Умра", onTap: () {}),
+      GridMenuItem(img: "assets/home/5.png", title: "Зекет Садака", onTap: () {}),
       GridMenuItem(img: "assets/home/6.png", title: "Дем салуу", onTap: () {}),
       GridMenuItem(
         img: "assets/home/7.png",
@@ -139,10 +135,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             gridMenu[index].title,
                             style: const TextStyle(
-                                height: 0,
-                                color: AppColors.yellow,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w700),
+                                height: 0, color: AppColors.yellow, fontSize: 15, fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                           ),
                         ],

@@ -32,8 +32,7 @@ class LeagueWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border(
                       bottom: BorderSide(
-                        color:
-                            const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3),
+                        color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3),
                         width: 1.0,
                       ),
                     ),
@@ -48,8 +47,7 @@ class LeagueWidget extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
-                    color:
-                        const Color.fromARGB(255, 12, 12, 12).withOpacity(0.6),
+                    color: const Color.fromARGB(255, 12, 12, 12).withOpacity(0.6),
                   ),
                 ),
                 Padding(

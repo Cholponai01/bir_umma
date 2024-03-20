@@ -16,9 +16,8 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () => context.router.push(const MainRoute()),
-            icon: const Icon(Icons.arrow_back)),
+        leading:
+            IconButton(onPressed: () => context.router.push(const MainRoute()), icon: const Icon(Icons.arrow_back)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15),
@@ -49,21 +48,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Аты-жөнү',
-                        style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600)),
+                    Text('Аты-жөнү', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600)),
                     Text('+996700123456',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black26,
-                            fontWeight: FontWeight.w500)),
+                        style: TextStyle(fontSize: 14, color: Colors.black26, fontWeight: FontWeight.w500)),
                     Text('atyjonu@gmail.com',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black26,
-                            fontWeight: FontWeight.w500)),
+                        style: TextStyle(fontSize: 14, color: Colors.black26, fontWeight: FontWeight.w500)),
                   ],
                 ),
               ],

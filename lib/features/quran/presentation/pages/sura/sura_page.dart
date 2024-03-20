@@ -78,14 +78,9 @@ class _SuraPageState extends State<SuraPage> {
                       leading: SvgPicture.asset("assets/svg/zikir/1.svg"),
                       title: const Text(
                         "Lorem Ipsum",
-                        style: TextStyle(
-                            color: AppColors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
+                        style: TextStyle(color: AppColors.black, fontSize: 18, fontWeight: FontWeight.w500),
                       ),
-                      trailing: isTrailingVisible
-                          ? const Icon(Icons.bookmark_outline)
-                          : null,
+                      trailing: isTrailingVisible ? const Icon(Icons.bookmark_outline) : null,
                     );
                   }))
         ],
@@ -133,6 +128,7 @@ class _SuraPageState extends State<SuraPage> {
   }
 }
 
+////
 class SuraListPage extends StatelessWidget {
   const SuraListPage({super.key});
 

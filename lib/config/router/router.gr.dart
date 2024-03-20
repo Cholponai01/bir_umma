@@ -87,7 +87,6 @@ abstract class _$AppRouter extends RootStackRouter {
   };
 }
 
-/// generated route for
 /// [AnswerPage]
 class AnswerRoute extends PageRouteInfo<void> {
   const AnswerRoute({List<PageRouteInfo>? children})

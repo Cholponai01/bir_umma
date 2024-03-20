@@ -13,9 +13,7 @@ class SlideBottomWidgetState extends State<SlideBottomWidget> {
 
   @override
   Widget build(BuildContext context) {
-    String sliderImagePath = isSliderOpen
-        ? "assets/svg/zikir/slideback.svg"
-        : "assets/svg/zikir/slider.svg";
+    String sliderImagePath = isSliderOpen ? "assets/svg/zikir/slideback.svg" : "assets/svg/zikir/slider.svg";
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,8 +29,7 @@ class SlideBottomWidgetState extends State<SlideBottomWidget> {
           },
           child: SvgPicture.asset(
             sliderImagePath,
-            colorFilter: ColorFilter.mode(
-                isSliderOpen ? Colors.blue : Colors.black, BlendMode.srcIn),
+            colorFilter: ColorFilter.mode(isSliderOpen ? Colors.blue : Colors.black, BlendMode.srcIn),
           ),
         ),
         const SizedBox(

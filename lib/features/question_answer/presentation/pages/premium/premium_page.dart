@@ -54,17 +54,14 @@ class _PremiumPageState extends State<PremiumPage> {
           ),
           const Text(
             'Артка',
-            style: TextStyle(
-                color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w500),
+            style: TextStyle(color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w500),
             // fontFamily: 'LondrinaShadow-Regular'),
           ),
           const SizedBox(
             height: 10,
           ),
           ElevatedButton(
-              onPressed: () =>
-                  context.pushRoute(const QuestionAndAnswerRoute()),
-              child: const Text('Суроо берүү'))
+              onPressed: () => context.pushRoute(const QuestionAndAnswerRoute()), child: const Text('Суроо берүү'))
         ],
       ),
     );

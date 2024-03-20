@@ -25,10 +25,7 @@ class QuestionAndAnswerPage extends StatelessWidget {
             )),
         title: const Text(
           'Суроо-жооп',
-          style: TextStyle(
-              color: Color.fromARGB(255, 132, 127, 127),
-              fontWeight: FontWeight.w600,
-              fontSize: 20),
+          style: TextStyle(color: Color.fromARGB(255, 132, 127, 127), fontWeight: FontWeight.w600, fontSize: 20),
         ),
         elevation: 2,
         shadowColor: Colors.grey,
@@ -54,9 +51,7 @@ class QuestionAndAnswerPage extends StatelessWidget {
               //         "assets/question_answer/Lock.svg",
             ),
             QuestionAndAnswerWidget(
-                onTap: () => context.pushRoute(const AnswerRoute()),
-                text: 'Жооптор',
-                icon: Icons.mail_outline)
+                onTap: () => context.pushRoute(const AnswerRoute()), text: 'Жооптор', icon: Icons.mail_outline)
           ],
         ),
       ),

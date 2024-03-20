@@ -121,10 +121,7 @@ class _DaaratPageState extends State<DaaratPage> {
                           Text(
                             gridMenu[index].title,
                             style: const TextStyle(
-                                height: 0,
-                                color: AppColors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700),
+                                height: 0, color: AppColors.white, fontSize: 20, fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                           ),
                         ],

@@ -22,10 +22,7 @@ class QuestionPage extends StatelessWidget {
             )),
         title: const Text(
           'Суроо-жооп',
-          style: TextStyle(
-              color: Color.fromARGB(255, 132, 127, 127),
-              fontWeight: FontWeight.w600,
-              fontSize: 20),
+          style: TextStyle(color: Color.fromARGB(255, 132, 127, 127), fontWeight: FontWeight.w600, fontSize: 20),
         ),
         elevation: 2,
         shadowColor: Colors.grey,
@@ -41,9 +38,7 @@ class QuestionPage extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: DecoratedBox(
-            decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(20)),
+            decoration: BoxDecoration(color: Colors.blue.withOpacity(0.1), borderRadius: BorderRadius.circular(20)),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: SingleChildScrollView(
@@ -52,10 +47,7 @@ class QuestionPage extends StatelessWidget {
                     TextFormField(
                       decoration: const InputDecoration(
                           hintText: 'Тема:',
-                          hintStyle: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600)),
+                          hintStyle: TextStyle(color: Colors.black54, fontSize: 18, fontWeight: FontWeight.w600)),
                       maxLines: 1,
                     ),
                     const TextField(
@@ -71,16 +63,12 @@ class QuestionPage extends StatelessWidget {
                         },
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size.fromHeight(45),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                           backgroundColor: Colors.blue,
                         ),
                         child: const Text(
                           'Жиберүү',
-                          style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
+                          style: TextStyle(color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w500),
                         )),
                     const SizedBox(
                       height: 5,

@@ -78,8 +78,7 @@ class _DaaratVideoPageState extends State<DaaratVideoPage> {
                   children: [
                     IconWithCounter(icon: Icons.favorite_border, counter: 210),
                     SizedBox(width: 25),
-                    IconWithCounter(
-                        icon: Icons.visibility_outlined, counter: 1123),
+                    IconWithCounter(icon: Icons.visibility_outlined, counter: 1123),
                     SizedBox(width: 25),
                     IconWithCounter(icon: Icons.share_outlined, counter: 1644),
                   ],
@@ -94,8 +93,7 @@ class _DaaratVideoPageState extends State<DaaratVideoPage> {
                   children: [
                     Text(
                       "Lorem Ipsum",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     SizedBox(height: 20),
                     Text(

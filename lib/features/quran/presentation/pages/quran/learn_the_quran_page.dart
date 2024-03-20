@@ -80,8 +80,7 @@ class LearnTheQuranPage extends StatelessWidget {
                         left: 70,
                         child: Text(
                           "Куран 0дөн,биринчи сабак",
-                          style:
-                              TextStyle(color: AppColors.black, fontSize: 25),
+                          style: TextStyle(color: AppColors.black, fontSize: 25),
                         ),
                       ),
                     ],
@@ -93,14 +92,11 @@ class LearnTheQuranPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        IconWithCounter(
-                            icon: Icons.favorite_border, counter: 210),
+                        IconWithCounter(icon: Icons.favorite_border, counter: 210),
                         SizedBox(width: 25),
-                        IconWithCounter(
-                            icon: Icons.visibility_outlined, counter: 1123),
+                        IconWithCounter(icon: Icons.visibility_outlined, counter: 1123),
                         SizedBox(width: 25),
-                        IconWithCounter(
-                            icon: Icons.share_outlined, counter: 1644),
+                        IconWithCounter(icon: Icons.share_outlined, counter: 1644),
                       ],
                     ),
                   ),
@@ -113,8 +109,7 @@ class LearnTheQuranPage extends StatelessWidget {
                       children: [
                         Text(
                           "Lorem Ipsum",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
                         SizedBox(height: 20),
                         Text(
