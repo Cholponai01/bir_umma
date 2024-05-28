@@ -66,18 +66,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const QuranPage(),
       );
     },
-    SignInRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SignInPage(),
-      );
-    },
-    SignUpRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SignUpPage(),
-      );
-    },
+    // SignInRoute.name: (routeData) {
+    //   return AutoRoutePage<dynamic>(
+    //     routeData: routeData,
+    //     child: const SignInPage(),
+    //   );
+    // },
+    // SignUpRoute.name: (routeData) {
+    //   return AutoRoutePage<dynamic>(
+    //     routeData: routeData,
+    //     child: const SignUpPage(),
+    //   );
+    // },
     ZikirRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
